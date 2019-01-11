@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/Routes/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/Routes</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/99</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span>
+* @author Vineet Mishra &lt;vineet.m@photoninfotech.net&gt;
+* @version 1.0.0
+*/
+&nbsp;
+// import - npm modules
+import React,<span class="cstat-no" title="statement not covered" > {Component} from "react";</span>
+import {Alert, Imag<span class="cstat-no" title="statement not covered" >e, Dimensions, Platform}</span> from "react-native";
+import {Router, Scene, Action<span class="cstat-no" title="statement not covered" >s} from "react-native-router-flux";</span>
+import { naviga<span class="cstat-no" title="statement not covered" >teTo } from "../../helper</span>s";
+&nbsp;
+// import - custom class
+import Login <span class="cstat-no" title="statement not covered" >from "../../screens/Login";</span>
+import ForgotPassword <span class="cstat-no" title="statement not covered" >from "../../screens/ForgotPassword";</span>
+import Register <span class="cstat-no" title="statement not covered" >from "../../screens/Register";</span>
+import StoreLocator <span class="cstat-no" title="statement not covered" >from "../../screens/StoreLocator";</span>
+import StoreDetails <span class="cstat-no" title="statement not covered" >from "../../screens/StoreDetails";</span>
+import Settings from<span class="cstat-no" title="statement not covered" > "../../screens/UserSettings";</span>
+import PreferredStation <span class="cstat-no" title="statement not covered" >from "../../screens/PreferredStation";</span>
+import Support <span class="cstat-no" title="statement not covered" >from "../../screens/Support";</span>
+import EditProfile <span class="cstat-no" title="statement not covered" >from "../../screens/EditProfile";</span>
+import PrivarcyPolicy <span class="cstat-no" title="statement not covered" >from "../../screens/PrivarcyPolicy";</span>
+import Notifications <span class="cstat-no" title="statement not covered" >from "../../screens/Notifications";</span>
+import NewsLetters <span class="cstat-no" title="statement not covered" >from "../../screens/NewsLetters";</span>
+import TermsAndConditions <span class="cstat-no" title="statement not covered" >from "../../screens/TermsAndConditions";</span>
+import Guest<span class="cstat-no" title="statement not covered" >Home from "../../screens/Home";</span>
+import UserHome <span class="cstat-no" title="statement not covered" >from "../../screens/UserHome";</span>
+import PushNotification <span class="cstat-no" title="statement not covered" >from "../../screens/PushNotification";</span>
+import VoucherList <span class="cstat-no" title="statement not covered" >from "../../screens/VoucherList";</span>
+import FuelFilling <span class="cstat-no" title="statement not covered" >from "../../screens/FuelFilling";</span>
+import PaymentSuccessfull <span class="cstat-no" title="statement not covered" >from "../../screens/PaymentSuccessfull";</span>
+import Faq <span class="cstat-no" title="statement not covered" >from "../../screens/Faq";</span>
+import OnBoardingScreen <span class="cstat-no" title="statement not covered" >from "../../screens/OnBoardingScreen";</span>
+import QRCodeScanning <span class="cstat-no" title="statement not covered" >from "../../screens/QRCodeScanning";</span>
+&nbsp;
+import LoyaltyCards <span class="cstat-no" title="statement not covered" >from "../../screens/LoyaltyCards";</span>
+import ScanCard <span class="cstat-no" title="statement not covered" >from "../../screens/ScanCard";</span>
+import GoFuelCard <span class="cstat-no" title="statement not covered" >from "../../screens/GoFuelCard";</span>
+import GoFuelCardDetails <span class="cstat-no" title="statement not covered" >from "../../screens/GoFuelCardDetails";</span>
+import LoyaltyCardDetails <span class="cstat-no" title="statement not covered" >from "../../screens/LoyaltyCardDetails";</span>
+import CreditAndDebitDetails <span class="cstat-no" title="statement not covered" >from "../../screens/CreditAndDebitDetails";</span>
+import creditAndDebitCardList <span class="cstat-no" title="statement not covered" >from "../../screens/creditAndDebitCardList";</span>
+import CardAddManual <span class="cstat-no" title="statement not covered" >from "../../screens/CardAddManual";</span>
+import GoFuelCardAddManually <span class="cstat-no" title="statement not covered" >from "../../screens/GoFuelCardAddManually";</span>
+import LoyaltyCardAddManually <span class="cstat-no" title="statement not covered" >from "../../screens/LoyaltyCardAddManually";</span>
+import VoucherCardDetails <span class="cstat-no" title="statement not covered" >from "../../screens/VoucherCardDetails";</span>
+import MembershipBenefits <span class="cstat-no" title="statement not covered" >from "../../screens/MembershipBenefits";</span>
+import MembershipDetails <span class="cstat-no" title="statement not covered" >from "../../screens/MembershipDetails";</span>
+import PostScussfullyQRCodeScanning <span class="cstat-no" title="statement not covered" >from "../../screens/PostScussfullyQRCodeScanning";</span>
+&nbsp;
+import {setCurr<span class="cstat-no" title="statement not covered" >entScene} from "../../act</span>ions";
+import {per<span class="cstat-no" title="statement not covered" >sist} from "../../../App</span>";<span class="cstat-no" title="statement not covered" ></span>
+&nbsp;
+const deviceWidth <span class="cstat-no" title="statement not covered" >= Dimensions.get("window").width;</span>
+const deviceHeight <span class="cstat-no" title="statement not covered" >= Dimensions.get("window").height;</span>
+&nbsp;
+/**
+* Represents Routes.
+* @class Routes
+* @extends Component
+*/
+export de<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fa</span>ult class Routes exte<span class="cstat-no" title="statement not covered" >nds Component {</span></span>
+&nbsp;
+		construct<span class="fstat-no" title="function not covered" >or(prop</span>s) {<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >				super(props);<span class="cstat-no" title="statement not covered" ></span></span>
+				this.renderSettingsIcon = this.renderSettingsIcon.bind(this);
+				this.renderHomeIcon = this.renderHomeIcon.bind(this);
+				this.renderFindIcon = this.renderFindIcon.bind(this);
+				this.renderLoyalityIcon = this.renderLoyalityIcon.bind(this);
+				this.renderPromotionIcon = this.renderPromotionIcon.bind(this);
+				this.renderPayIcon = this.renderPayIcon.bind(this);
+		}
+&nbsp;
+&nbsp;
+    renderSettingsIcon({focused}) {
+			let image = focused ? require('../../assets/images/navigation/settingActive.png') : require('../../assets/images/navigation/setting.png');
+			return ( &lt;Image source={image} /&gt; );
+		}
+&nbsp;
+		renderFindIcon({focused})  {
+			let image = focused ? require('../../assets/images/navigation/searchActive.png') : require('../../assets/images/navigation/search.png');
+			return ( &lt;Image source={image} /&gt; );
+		}
+&nbsp;
+		renderHomeIcon({focused})  {
+			let image = focused ? require('../../assets/images/navigation/homeActive.png') : require('../../assets/images/navigation/home.png');
+			return ( &lt;Image source={image} /&gt; );
+		}
+&nbsp;
+		renderLoyalityIcon({focused})  {
+			let image = focused ? require('../../assets/images/navigation/walletActive.png') : require('../../assets/images/navigation/wallet.png');
+			return ( &lt;Image source={image} /&gt; );
+		}
+&nbsp;
+		renderPayIcon({focused})  {
+			let image = focused ? require('../../assets/images/navigation/payActive.png') : require('../../assets/images/navigation/pay.png');
+			return ( &lt;Image source={image} /&gt; );
+		}
+&nbsp;
+		renderPromotionIcon({focused})  {
+			let image = focused ? require('../../assets/images/navigation/settingActive.png') : require('../../assets/images/navigation/setting.png');
+			return ( &lt;Image source={image} /&gt; );
+		}
+&nbsp;
+		onStateChange = ()<span class="fstat-no" title="function not covered" > =</span>&gt; {
+				pe<span class="cstat-no" title="statement not covered" >rsist.store.dispatch(setCurrentScene("_home"));</span>
+		}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
+&nbsp;
+    /**
+    * @function render
+    * React render method for rendering the native elements
+    */
+&nbsp;
+	render() {
+		retu<span class="cstat-no" title="statement not covered" >rn (</span>
+			&lt;Router onStateChange={this.onStateChange}&gt;
+					&lt;Scene&gt;
+							&lt;Scene key="auth" hideNavBar={true} initial={this.props.isLoggedin} &gt;
+									&lt;Scene key="onBoardingScreen" component={OnBoardingScreen} title="On Boarding Screen" initial={!this.props.isAppInstalled} /&gt;
+									&lt;Scene tabs key="prehome" hideNavBar={true} swipeEnabled={false} tabBarPosition="bottom" tabBarStyle={{height: 56, paddingVertical: 4}} initial={this.props.isAppInstalled}&gt;
+											&lt;Scene key="home" icon={this.renderHomeIcon} hideNavBar={true}   component={GuestHome} title="Home" labelStyle={{paddingTop: 8}} /&gt;
+											&lt;Scene key="storeLocator" icon={this.renderFindIcon} hideNavBar={true} title="Stations" component={StoreLocator} labelStyle={{paddingTop: 8}} /&gt;
+											&lt;Scene key="qRCodeScanning" icon={this.renderPayIcon}  hideNavBar={true}  component={QRCodeScanning} tabBarOnPress={() =&gt; Alert.alert('','Need to Register or Login to access this sectio<span class="fstat-no" title="function not covered" >n.',[{text: 'C</span>anc<span class="cstat-no" title="statement not covered" >el', onPress: () =&gt; console.log('Cancel Pressed'), style: 'cancel'},{text: 'Ok', onPress: () =&gt; navigateTo("register")},],{ ca<span class="fstat-no" title="function not covered" >ncelable</span>: f<span class="cstat-no" title="statement not covered" >alse })}  title="Pay"/&gt;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+											&lt;Scene tabs key="wallet" hideNavBar={true} icon={this.renderLoyalityIcon} swipeEnabled={true} tabBarOnPress={() =&gt; Alert.alert('','Need to Register or Login to access this sectio<span class="fstat-no" title="function not covered" >n.',[{text: 'C</span>anc<span class="cstat-no" title="statement not covered" >el', onPress: () =&gt; console.log('Cancel Pressed'), style: 'cancel'},{text: 'Ok', onPress: () =&gt; navigateTo("register")},],{ ca<span class="fstat-no" title="function not covered" >ncelable</span>: f<span class="cstat-no" title="statement not covered" >alse })} tabBarPosition="top" title="W</span>allet" labelStyle={{paddingTop:  8}}&gt;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+			                    &lt;Scene key="goFuelCard" hideNavBar={true}  component={GoFuelCard} title="Go fuel Card"/&gt;
+			                    &lt;Scene key="creditDebitCards" hideNavBar={true}  component={creditAndDebitCardList} title="Credit &amp; Debit"/&gt;
+			                    &lt;Scene key="loyaltyCards" hideNavBar={true}  component={LoyaltyCards} title="Loyalty Cards"/&gt;
+			                &lt;/Scene&gt;
+							&lt;Scene key="settings" icon={this.renderSettingsIcon} hideNavBar={true} title="Settings" tabBarOnPress={() =&gt; Alert.alert('','Need to Register or Login to access this secti<span class="fstat-no" title="function not covered" >on.',[{text: '</span>Can<span class="cstat-no" title="statement not covered" >cel', onPress: () =&gt; console.log('Cancel Pressed'), style: 'cancel'},{text: 'Ok', onPress: () =&gt; navigateTo("register")},],{ c<span class="fstat-no" title="function not covered" >ancelabl</span>e: <span class="cstat-no" title="statement not covered" >false })}  component={Settings}  label</span>Style={{paddingTop: 8}} /&gt;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+									&lt;/Scene&gt;
+									&lt;Scene key="login" component={Login} title="Login" /&gt;
+									&lt;Scene key="register" component={Register} title="Register" /&gt;
+									&lt;Scene key="forgotPassword" component={ForgotPassword} title="ForgotPassword" /&gt;
+									&lt;Scene key="storeLocator" title="Stations" component={StoreLocator} /&gt;
+									&lt;Scene key="storeDetails" component={StoreDetails} title="StoreDetails"/&gt;
+									&lt;Scene key="termsAndConditions" component={TermsAndConditions} title="Terms &amp; Conditions"/&gt;
+                                    &lt;Scene key="privacyPolicy" component={PrivarcyPolicy} title="Privacy Policy"/&gt;
+									&lt;Scene key="membershipDetails" component={MembershipDetails} title="Membership Details"/&gt;
+							&lt;/Scene&gt;
+							&lt;Scene key="app" hideNavBar={true} initial={this.props.isLoggedin}&gt;
+									&lt;Scene tabs key="home" hideNavBar={true} swipeEnabled={true} tabBarPosition="bottom" tabBarStyle={{height: 56, paddingVertical: 4}}&gt;
+											&lt;Scene key="home" icon={this.renderHomeIcon} hideNavBar={true}  component={UserHome} title="Home" labelStyle={{paddingTop: 8}} /&gt;
+											&lt;Scene key="storeLocator" icon={this.renderFindIcon} hideNavBar={true} title="Stations" component={StoreLocator} labelStyle={{paddingTop: 8}} /&gt;
+											&lt;Scene key="qRCodeScanning" icon={this.renderPayIcon}  hideNavBar={true}  component={QRCodeScanning} title="Pay"/&gt;
+											&lt;Scene tabs key="wallet" hideNavBar={true} icon={this.renderLoyalityIcon} swipeEnabled={true} indicatorStyle={{backgroundColor:"rgb(15, 113, 184)"}} tabBarPosition="top" title="Wallet" labelStyle={{paddingTop: (Platform.OS === 'ios' &amp;&amp; deviceHeight === 896 &amp;&amp; deviceWidth === 414) || (Platform.OS === 'ios' &amp;&amp; deviceHeight === 812 &amp;&amp; deviceWidth === 375) ? 30 : 8, color: "#333333"}} upperCaseLabel={false} tabBarStyle={{backgroundColor: "#ffffff"}}&gt;
+			                    &lt;Scene key="goFuelCard" hideNavBar={true}  component={GoFuelCard} title="Go Fuel Card" /&gt;
+			                    &lt;Scene key="creditDebitCards" hideNavBar={true}  component={creditAndDebitCardList} title="Credit &amp; Debit"/&gt;
+			                    &lt;Scene key="loyaltyCards" hideNavBar={true}  component={LoyaltyCards} title="Loyalty Cards"/&gt;
+			                &lt;/Scene&gt;
+									&lt;Scene key="settings" icon={this.renderSettingsIcon} hideNavBar={true} title="Settings" component={Settings} labelStyle={{paddingTop: 8}} /&gt;
+									&lt;/Scene&gt;
+									&lt;Scene key="storeDetails" component={StoreDetails} title="StoreDetails"/&gt;
+									&lt;Scene key="settings" component={Settings} title="Settings"/&gt;
+									&lt;Scene key="preferredStation" component={PreferredStation} title="Preferred Station"/&gt;
+					    		    &lt;Scene key="editProfile" component={EditProfile} title="Edit Profile"/&gt;
+									&lt;Scene key="support" component={Support} title="Support"/&gt;
+									&lt;Scene key="privacyPolicy" component={PrivarcyPolicy} title="Privacy Policy"/&gt;
+									&lt;Scene key="notifications" component={Notifications} title="Notification Preference" /&gt;
+									&lt;Scene key="newsLetters" component={NewsLetters} title="Newsletter"/&gt;
+									&lt;Scene key="termsAndConditions" component={TermsAndConditions} title="Terms &amp; Conditions"/&gt;
+									&lt;Scene key="pushNotification" component={PushNotification} title="Push Notification" /&gt;
+									&lt;Scene key="faqs" component={Faq} title="Frequently asked questions"/&gt;
+									&lt;Scene key="qRCodeScanning" component={QRCodeScanning} title="Edit Profile"/&gt;
+									&lt;Scene key="postScussfullyQRCodeScanning" component={PostScussfullyQRCodeScanning} title="Edit Profile"/&gt;
+									&lt;Scene key="fuelFilling" component={FuelFilling} title="Select Payment"/&gt;
+									&lt;Scene key="paymentSuccessfull" component={PaymentSuccessfull} title="Payment Successfull"/&gt;
+									&lt;Scene key="voucher"  component={VoucherList} title="Vouchers"/&gt;
+									&lt;Scene key="loyaltycard" component={LoyaltyCards} title="LoyaltyCards"/&gt;
+									&lt;Scene key="scanCard" component={ScanCard} title="Scan Card" /&gt;
+									&lt;Scene key="goFuelCardDetails" component={GoFuelCardDetails} title="GO FUEL CARD"/&gt;
+									&lt;Scene key="loyaltyCardDetails" component={LoyaltyCardDetails} title="Loyalty Cards"/&gt;
+									&lt;Scene key="creditAndDebitDetails" component={CreditAndDebitDetails} title=" Credit &amp; Debit"/&gt;
+									&lt;Scene key="creditAndDebitCardList" component={creditAndDebitCardList} title=" Credit &amp; debit"/&gt;
+									&lt;Scene key="cardAddManual" component={CardAddManual} title="Card Add Manual"/&gt;
+									&lt;Scene key="goFuelCardAddManually" component={GoFuelCardAddManually} title="GoFuelCardAddManually"/&gt;
+									&lt;Scene key="loyaltyCardAddManually" component={LoyaltyCardAddManually} title="loyaltyCardAddManually"/&gt;
+									&lt;Scene key="voucherCardDetails" component={VoucherCardDetails} title="voucherCardDetails"/&gt;
+									&lt;Scene key="membershipBenefits" component={MembershipBenefits} title="membershipBenefits"/&gt;
+									&lt;Scene key="membershipDetails" component={MembershipDetails} title="membershipDetails"/&gt;
+							&lt;/Scene&gt;
+					&lt;/Scene&gt;
+			&lt;/Router&gt;
+		);
+	}<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 05 2018 19:09:36 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

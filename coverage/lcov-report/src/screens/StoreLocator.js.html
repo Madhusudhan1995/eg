@@ -1,0 +1,2081 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/screens/StoreLocator.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/screens</a> StoreLocator.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/123</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/50</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/96</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span>
+* @author Arun Kukkudapu &lt;kukkudapu.arun@photoninfotech.net&gt;
+* @version 1.0.2
+* @summary station finder for the application.
+* @description In this screen user can search for the stations and by default he can see user's near by stations.
+* user can search for stations based on state,zip code &amp; city.
+* user will  be able to set filters while searching for stations.
+* user would be able to view the stations in a map as well as in flatlist.
+* user, would be able to view the details of the stations on clicking a station from the list.
+* on tap of geo location icon,auto-detect user’s current location and will be able to see results based on the current location
+* user would be able to see station icons in the map.
+* If user has not selected any range from the filter, system to search for the stations within 15 KMS radius of the device location.
+* If no results found, system to display an message “No Results found. Please search with different search term” in a pop up.
+* On tap of the any station, user will be navigated to station details screen.
+* User would be able to swipe left or right to view next or previous station carousel.
+*/
+&nbsp;
+/**
+* @import React compoment from "react" for creating custom react component and to use lifecycle
+* hooks come along with react.
+* @import View, Text, TouchableOpacity, Image, Alert, ScrollView, Platform, KeyboardAvoidingView,
+* SafeAreaView from "react-native" for creating our view.
+* @import connect from "react-redux" for connecting react compoenent with redux which will convert
+* our component as container component.
+* @import compose from "redux" for removing the complexicity of higher order components used in the screen.
+* @import Icon from "react-native-vector-icons/FontAwesome" to use font icons in this screen whereever required.
+* @import SearchBar from "react-native-elements" to see the search bar with basic required styles.
+* import MapView from 'react-native-maps'; to see the map on screen.
+*/
+import React,<span class="cstat-no" title="statement not covered" > { Component } from 'react';</span>
+import { Text, View<span class="cstat-no" title="statement not covered" >, Dimensions, TouchableO</span>pacity, FlatList, Image, KeyboardAvoidingView, Platform,TextInput,Picker,ScrollView,LayoutAnimation, UIManager,ImageBackground,Linking } from 'react-native';
+import Swiper from 'react<span class="cstat-no" title="statement not covered" >-native-swiper';</span>
+import MapView, { PROVI<span class="cstat-no" title="statement not covered" >DER_GOOGLE } from 'react-native-maps';</span>
+import { Icon } from 'react<span class="cstat-no" title="statement not covered" >-native-elements';</span>
+import {connect} f<span class="cstat-no" title="statement not covered" >rom "react-redux";</span>
+&nbsp;
+/**
+* @import Button, Toolbar for building our screen.
+* @description Button: renders custom button in the screen.
+* @import {navigateTo, redirectTo, navigateBack} from "helpers" file. "helpers" file has
+* reusable functions written in it.
+* @description navigateTo(scene): It takes screen name as a parameter and navigates to the respective screen.
+* redirectTo(scene): It takes screen name as a parameter and navigates to the respective screen.
+* It deletes the back history
+* and no animation happens while screen transition.
+* navigateBack(): It simply naviagates the user to the back screen.
+*/
+import {handleGetStations} f<span class="cstat-no" title="statement not covered" >rom "../actions/stationFinderActions";</span>
+import { Toolbar }<span class="cstat-no" title="statement not covered" > from "../components";</span>
+import { naviga<span class="cstat-no" title="statement not covered" >teBack, navigateTo } f</span>rom "../helpers";
+import Checkbox <span class="cstat-no" title="statement not covered" >from '../components/Checkbox';</span>
+import Button <span class="cstat-no" title="statement not covered" >from '../components/Button';</span>
+import ConstantList from <span class="cstat-no" title="statement not covered" >"./../constants/lagunage_constant";</span>
+import styles <span class="cstat-no" title="statement not covered" >from './../styles'</span>
+import Converter <span class="cstat-no" title="statement not covered" >from './Converter';</span>
+&nbsp;
+import stylesheet fro<span class="cstat-no" title="statement not covered" >m "../styles/stationfinder";<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >const { width, height } = Dimensions.g</span>et('wind<span class="cstat-no" title="statement not covered" >ow');<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+const aspectRatio <span class="cstat-no" title="statement not covered" >= width / heigh</span>t;
+const LATITUDE_DELTA <span class="cstat-no" title="statement not covered" >= 0.092</span>2;
+const LONGITUDE_DELTA <span class="cstat-no" title="statement not covered" >= LATITUDE_DELTA * aspectRati</span>o;
+&nbsp;
+/**
+* @class StoreLocator
+* @extends Component
+* @summary Represents station finder.
+* @description This is a StoreLocator class. It extands react Component class for using the functions comes along with it.
+*/
+class StoreLoca<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >to</span>r extends Component {<span class="cstat-no" title="statement not covered" ></span></span>
+       /**
+    * @constructor It is initializing the state with default properties.
+    * searchStation: Boolean property for hiding and showing password value.
+    * prefferedStations: Array of preffered stations
+    * distance: Number property for selecting the range default is 20.
+    * distanceType: String property for allowing user to  switch between miles and km to see the distance.
+    *
+    */
+  
+      const<span class="fstat-no" title="function not covered" >ructor(props)</span> {<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            super(props);<span class="cstat-no" title="statement not covered" ></span></span>
+            this.searchbar = React.createRef();
+            this.state = {
+                  address : 'Neitherland',
+                  searchStation:false,
+                  prefferedStations :  ConstantList.storeLocator.prefferedStations,
+                  distance : 20,
+                  modalVisible: false,
+                  distanceType: 'km',
+                  lat: 12.9317,
+                  lng: 77.6914,
+                  data: [],
+                  markercoords: {
+                        latitude: 12.9428,
+                        longitude: 77.6966
+                  },
+                  stationdata: ConstantList.storeLocator.stationdata,
+                  searchedResultsData :ConstantList.storeLocator.searchedResultsData,
+                  textInputValue: '',
+                  filterParking : false,
+                  filterRestaurant:false,
+                  filterCarwash: false,
+                  filterShopping:false,
+                  filterOpenAllTimes : false,
+                  filterRestrooms : false,
+                  filterCoffeeAvailablity:false,
+                  filterWifiAvailability:false,
+                  filterCarCharge:false,
+                  filterTruckStop:false,
+                  searchBarHeight: Dimensions.get('window').height/2 - 30,
+                  displayBackArrow : 'none',
+                  displayFilterIcon : 'flex',
+                  fiterOptionsInScrollView : false,
+                  showNearbyStations : true,
+                  showSearchedResultStations : false
+            }
+      }
+      
+ 
+&nbsp;
+      /**
+    * @function componentDidMount: React lifecycle function. It gets called before render() and first
+    * time when component loads.
+    * @function this.getCurrentLocation(): It returns a current location value with latitude and longitude if location services on and display on map view.
+    */
+      componentDidMount() {
+            this.getCurrentLocation();
+            this.props.getStations();
+            // this.props.actions.getStations();
+      }
+&nbsp;
+      /**
+       * @function searchStore: This function is invoked when user searches for any station in search bar.
+       * with help of searched text this function will filter the data
+       * @params {any} text: this is the word which user searched in search bar.
+      */
+      searchStore <span class="fstat-no" title="function not covered" >= </span>(text) =&gt;{
+            let searchedSt<span class="cstat-no" title="statement not covered" >ore = text.toLowerC</span>ase();
+<span class="cstat-no" title="statement not covered" >            this.setState({ textInputValue: text</span> });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (text.length &gt; 0) {</span>
+                  var sam<span class="cstat-no" title="statement not covered" >pleData = ConstantList.storeLocator.sampleData;</span>
+                  var<span class="cstat-no" title="statement not covered" > farray = sampleDa<span class="fstat-no" title="function not covered" >ta</span>.filter((item) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                        return item.zipCode.toLowerCase().startsWith(searchedStore) || item.city.toLowerCase().startsWith(searchedStore) || item.stateName.toLowerCase().startsWith(se</span>archedStore);
+                  })
+<span class="cstat-no" title="statement not covered" >                  this.setState({ data: fa</span>rray });
+            }
+            else {
+<span class="cstat-no" title="statement not covered" >                  this.setState({ data</span>: [] });
+            }
+<span class="cstat-no" title="statement not covered" >      }</span>
+      getCurrentLocation <span class="fstat-no" title="function not covered" >= </span>() =&gt; {
+<span class="cstat-no" title="statement not covered" >            navigator.geolocation.getCurrentPos<span class="fstat-no" title="function not covered" >it</span>ion((position) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                  console.log("position",po</span>sition)
+<span class="cstat-no" title="statement not covered" >                  this.setState({</span>
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                  });
+            },
+<span class="fstat-no" title="function not covered" ></span>            (error)=&gt;{
+<span class="cstat-no" title="statement not covered" >                  console.lo</span>g(error);
+            },
+            {
+                  timeout : 20000,
+                  maximumAge : 0,
+                  enableHighAccuracy : true
+            }
+            );
+<span class="cstat-no" title="statement not covered" >      }</span>
+&nbsp;
+      searchButtonPressed <span class="fstat-no" title="function not covered" >= </span>()=&gt;{
+<span class="cstat-no" title="statement not covered" >            this.setState({showSearchedResultStations:true</span>
+                  ,fiterOptionsInScrollView :false,
+                  displayBackArrow : 'none',
+                  displayFilterIcon:'flex',
+                  searchBarHeight: Dimensions.get('window').height/2 - 30},
+<span class="fstat-no" title="function not covered" ></span>                  () =&gt; {
+<span class="cstat-no" title="statement not covered" >                        th</span>is._animate();
+                    });
+<span class="cstat-no" title="statement not covered" >      }</span>
+      backArrowPressed <span class="fstat-no" title="function not covered" >= </span>()=&gt;{
+<span class="cstat-no" title="statement not covered" >            this.setState({</span>
+                  searchBarHeight: Dimensions.get('window').height/2 - 30,
+                  fiterOptionsInScrollView :false,
+                  displayBackArrow : 'none',
+                  displayFilterIcon:'flex',
+                  showNearbyStations:true   
+            },
+<span class="fstat-no" title="function not covered" ></span>            () =&gt; {
+<span class="cstat-no" title="statement not covered" >                  this._an</span>imate();
+              })
+<span class="cstat-no" title="statement not covered" >      }</span>
+      /**
+       * @function selectedStore: This function is invoked whenever user is select any of the station from searched stations results.
+       * from searched stations results.
+       * @params {object} coordinates: coordinates of user selected statuion.
+      */
+      selectedStore <span class="fstat-no" title="function not covered" >= </span>(coordinates, name) =&gt; {
+<span class="cstat-no" title="statement not covered" >            this.setState({ lat: coordinates.latitude, lng: coordinates.longitude, data: [], textInputValue: name</span> })
+<span class="cstat-no" title="statement not covered" >      }</span>
+&nbsp;
+      /**
+       * @function selectedDistype: This function is invoked whenever user is select km to miles component,if user selects km then
+       * it display distance in kilometers,else in miles.
+       * @params {string} dist: distance type km or miles.
+      */
+      selectedDistype <span class="fstat-no" title="function not covered" >= </span>(dist) =&gt; {
+<span class="cstat-no" title="statement not covered" >            this.setState({ distanceType: dist</span> })
+<span class="cstat-no" title="statement not covered" >      }</span>
+&nbsp;
+      _animate <span class="fstat-no" title="function not covered" >= </span>() =&gt; {
+<span class="cstat-no" title="statement not covered" >            UIManager.setLayoutAnimationEnabledExperimental &amp;&amp; UIManager.setLayoutAnimationEnabledExperimental(true);</span>
+<span class="cstat-no" title="statement not covered" >            LayoutAnimation.easeInEaseOut();</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+&nbsp;
+        onFocusSearchBa<span class="fstat-no" title="function not covered" >r </span>= () =&gt; {
+<span class="cstat-no" title="statement not covered" >            this.setState({</span>
+              searchBarHeight: Dimensions.get('window').height - 50,
+              displayBackArrow : 'flex',
+              displayFilterIcon:'none',
+              fiterOptionsInScrollView : true,
+              showNearbyStations : false,
+              showSearchedResultStations:false
+<span class="fstat-no" title="function not covered" ></span>            }, () =&gt; {
+<span class="cstat-no" title="statement not covered" >                this._anim</span>ate();
+            })
+<span class="cstat-no" title="statement not covered" >        }</span>
+  
+      distanceButtonTappedToMap <span class="fstat-no" title="function not covered" >= </span>() =&gt; {
+            const s<span class="cstat-no" title="statement not covered" >cheme = Platform.select({ ios: 'maps:0,0?q=', android: 'geo:0,0?q=' });</span>
+            const l<span class="cstat-no" title="statement not covered" >atLng = `${this.state.markercoords.latitude},${this.state.markercoords.longit</span>ude}`;
+            const <span class="cstat-no" title="statement not covered" >label = 'Custom</span> Label';
+            cons<span class="cstat-no" title="statement not covered" >t url = Platform.select({</span>
+              ios: `${scheme}${label}@${latLng}`,
+              android: `${scheme}${latLng}(${label}`});
+<span class="cstat-no" title="statement not covered" >            Linking.openURL(url);</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+&nbsp;
+      filterWith <span class="fstat-no" title="function not covered" >= </span>(key)=&gt; {
+<span class="cstat-no" title="statement not covered" >            this.setState({</span>
+                  [key]: !this.state[key]
+            });
+<span class="cstat-no" title="statement not covered" >        }</span>
+&nbsp;
+      /**
+       * @function selectedDistype: This function is invoked whenever user clicks on filter icon a modal is popup.
+       * @params {boolean} visible: if user clicks on .
+      */
+     emptySearchBar =<span class="fstat-no" title="function not covered" > (</span>)=&gt;{
+<span class="cstat-no" title="statement not covered" >      this.setState({textInputValue:''},() =&gt;<span class="fstat-no" title="function not covered" > {</span></span>
+<span class="cstat-no" title="statement not covered" >            this._animate(</span>);
+        });
+     }<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span>
+      /**
+            * @function render
+            * React render method for rendering the native elements
+      */
+&nbsp;
+      render() {<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            return (</span>
+                  &lt;View style={stylesheet.stationfindercontainer}&gt;
+                        &lt;View style={styles.mapContainer}&gt;
+                              &lt;View style={{ flex: 1 }}&gt;
+                              &lt;View style={{flexDirection:'row',position:'relative',zIndex:30}}&gt;
+                                    &lt;Toolbar
+                                          style={[styles.noBorderToolbar,{backgroundColor:'tranparant',width:100,zIndex:30}]}
+                                          onClickLeftIcon={navigateBack}
+                                          iconName="loginpage"
+                                          /&gt;
+                                    &lt;View style={{width:80,alignSelf:'flex-end',position:'absolute',right:30,height:40,zIndex:30,top:40}}&gt; 
+                                          &lt;Converter selectedDistype={this.selectedDistype}/&gt;
+                                    &lt;/View&gt;
+                              &lt;/View&gt;
+                                    &lt;MapView style={{ width: Dimensions.get('window').width, height: Dimensions.get('window').height / 2, left: 0, right: 0, top: 0, bottom: 0, position: 'absolute' }}
+                                          provider={MapView.PROVIDER_GOOGLE}
+                                          showsMyLocationButton={false}
+                                          showsUserLocation={true}
+                                          region={{
+                                                latitude: this.state.lat,
+                                                longitude: this.state.lng,
+                                                latitudeDelta: 0.0900,
+                                                longitudeDelta: 0.0500
+                                          }}&gt;
+                                          &lt;MapView.Marker
+                                                coordinate={{ latitude: this.state.markercoords.latitude, longitude: this.state.markercoords.longitude }}
+                                                description={this.state.address}
+                                          &gt;
+                                                &lt;Image style={{ width: 20, height: 30, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/esso_logo.png')} /&gt;
+                                          &lt;/MapView.Marker&gt;
+                                    &lt;/MapView&gt;
+                              &lt;/View&gt;
+                              &lt;KeyboardAvoidingView behavior="height" enabled&gt;
+                                          &lt;TouchableOpacity style={stylesheet.mylocationbutton} onPress={this.getCurrentLocation}&gt;
+                                                &lt;View style={{ backgroundColor: 'white',  width: 45, height: 45, borderRadius: 50, justifyContent: 'center', zIndex: 2 }}&gt;
+                                                &lt;Icon name="my-location" size={20} color='#0f71b8' /&gt;
+                                                &lt;/View&gt;
+                                                &lt;View&gt;
+                                                &lt;/View&gt;
+                                          &lt;/TouchableOpacity&gt;
+                              &lt;/KeyboardAvoidingView&gt;
+                              &lt;View style={[stylesheet.listView,{height: this.state.searchBarHeight}]}&gt;
+                              &lt;View style={stylesheet.searchbarFlex}&gt;
+                                                      &lt;Text style={stylesheet.greybar}&gt;&lt;/Text&gt;
+                                                &lt;/View&gt;
+&nbsp;
+                                                 &lt;View style={stylesheet.searchbarcontainer}&gt;
+                                                 
+                                                      &lt;View style={[stylesheet.backarrowcontainer,{display:this.state.displayBackArrow,zIndex:40}]}&gt;
+                                                            &lt;Icon onPress={this.backArrowPressed} name="arrow-left" type="material-community" size={25} color='black' /&gt;
+                                                      &lt;/View&gt;
+                                                
+                                                      &lt;View style={{ flex:1}}&gt;
+                                                      &lt;TextInput
+                                                            ref={this.searchbar}
+                                                            style={stylesheet.textInputSearch}
+                                                            placeholder="Search" 
+                                                            onChangeText={this.searchStore}
+                                                            onFocus={this.onFocusSearchBar}
+                                                            onBlur={this.onBlurSearchBar}
+                                                            value={this.state.textInputValue}
+                                                      /&gt; 
+                                                      { this.state.textInputValue.length &gt; 0 &amp;&amp;
+                                                      &lt;TouchableOpacity onPress={this.emptySearchBar}&gt;
+                                                      &lt;View style={{zIndex:10}}&gt;
+                                                      &lt;Image style={{zIndex:10,height:20,width:20,position:"absolute",bottom:10,right:10}} resizeMode='contain' source={require('../assets/images/closeButtonSearchBar.png')} /&gt; 
+                                                      &lt;/View&gt;
+                                                      &lt;/TouchableOpacity&gt;
+                                                      }
+                                                      &lt;/View&gt;
+                                                      &lt;View style={stylesheet.filtering}&gt;
+                                                            &lt;TouchableOpacity onPress={(<span class="fstat-no" title="function not covered" >) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>                                                                  this.onFocusSearchBar()}} &gt;
+                                                                  &lt;Image style={{ height:23,width:25,display:this.state.displayFilterIcon,alignSelf:'center'}} source={require('../assets/images/filter.png')} /&gt; 
+                                                            &lt;/TouchableOpacity&gt;
+                                                      &lt;/View&gt;
+                                                &lt;/View&gt;
+                                   {this.state.showNearbyStations &amp;&amp; &lt;FlatList
+                                     horizontal = {this.state.data.length == 0 &amp;&amp; true  }
+                                    showsHorizontalScrollIndicator={false}
+                                          data={this.state.data.length &gt; 0 ?    this.state.data : this.state.stationdata}
+<span class="fstat-no" title="function not covered" >                                          keyE</span>xtractor={(ite<span class="cstat-no" title="statement not covered" >m, index) =&gt; index.toStri</span>ng()}
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span>                                          ref={(ref) =&gt; { this.f</span>latListRef = ref; }}
+                                          I<span class="fstat-no" title="function not covered" >temSeparatorComponent={</span>() <span class="cstat-no" title="statement not covered" >=&gt; &lt;View style={{ marginLeft: 0, marginRight: 0, height: 0.5, backgroundColor: '#ffffff' }} /&gt;}</span>
+<span class="fstat-no" title="function not covered" ></span>                                          renderItem={({ ite<span class="cstat-no" title="statement not covered" >m, index }</span>) =&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+                                                      &lt;View style={stylesheet.flatlistContainerNearByStations}&gt;
+                                                            
+                                                                  &lt;View style={{flex:1,flexDirection:'row'}}&gt;
+                                                                        &lt;TouchableOpacity style={{flexDirection:'row',flex:1}} onPress={<span class="fstat-no" title="function not covered" >() =&gt; na</span>vig<span class="cstat-no" title="statement not covered" >ateTo("storeDetails",item)}&gt;</span>
+                                                                              &lt;View style={{flex:0.6,padding:10}}&gt;
+                                                                                    &lt;Text style={{color:'black',fontWeight:'bold',fontSize:22}}&gt;Esso&lt;/Text&gt;
+                                                                                    &lt;Text style={{color:'#808080',fontWeight:'600'}}&gt;1234 Main St. London&lt;/Text&gt;
+                                                                                    &lt;Text style={{color:'#808080',fontWeight:'700'}}&gt;UK.&lt;/Text&gt;
+                                                                                    &lt;Text style={{fontSize:10,color:'#808080'}}&gt;&lt;Text style={{fontSize:10,color:'#808080',fontWeight:'700'}}&gt;OPEN &lt;Text style={{fontSize:20}}&gt;.&lt;/Text&gt; &lt;/Text&gt;24 Hours&lt;/Text&gt;
+                                                                                    &lt;View style={{flexDirection:'row',alignItems:'center',marginTop:10}}&gt;
+                                                                                          &lt;Image style={{ height: 12, width: 12}} source={require('../assets/images/home/FuelCard.png')}/&gt;
+                                                                                          &lt;Text style={{paddingLeft:5,fontSize: 10,color:'#808080'}}&gt;Fuel Card Accepted&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                              &lt;/View&gt;
+                                                                              &lt;View style={{flex:0.4}}&gt;
+                                                                              &lt;ImageBackground style={{ height: "100%", width: "100%", borderTopRightRadius: 9, overflow: 'hidden' }} resizeMode='cover' source={require('../assets/images/Prefered-Staion-Android.png')} &gt;
+                                                                                    { item.category == 'esso' ?
+                                                                                    &lt;Image style={{ height: 40, width: 40,  marginLeft:30,marginTop:40 }} source={require('../assets/images/home/EssoGoFuel.png')}/&gt;
+                                                                                    :
+                                                                                    &lt;Image style={{ height: 40, width: 40,  marginLeft:30,marginTop:40 }} source={require('../assets/images/home/ShellGoFuel.png')}/&gt;
+                                                                                    }                                                                 
+                                                                              &lt;/ImageBackground&gt;
+                                                                              &lt;/View&gt; 
+                                                                        &lt;/TouchableOpacity&gt;
+                                                                  &lt;/View&gt;
+                                                                  &lt;View style={{flex:0.5,}}&gt;
+                                                                  &lt;Swiper paginationStyle={{ height:65 }}&gt;
+                                                                        &lt;View style={{ flex: 1,  borderBottomLeftRadius: 9, borderBottomRightRadius: 9, justifyContent: 'space-around', backgroundColor: 'rgb(248,248,248)' }}&gt;
+                                                                              &lt;View style={{ flex: 4, flexDirection: 'row', borderBottomLeftRadius: 23, borderBottomRightRadius: 23, justifyContent: 'space-around', backgroundColor: 'rgb(248,248,248)' }}&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 25, width: 25, alignSelf: 'center' }} resizeMode='contain'  source={require('../assets/images/home-Restroom-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Restroom&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 25, width: 25, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/home-restaurant-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Restaurant&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 25, width: 25, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/home-carwash-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Carwash&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 25, width: 25, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/home-24-7-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;24/7&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                              &lt;/View&gt;
+                                                                        &lt;/View&gt;
+                                                                        &lt;View style={{ flex: 1,  borderBottomLeftRadius: 9, borderBottomRightRadius: 9, justifyContent: 'space-around', backgroundColor: 'rgb(248,248,248)' }}&gt;
+                                                                              &lt;View style={{ flex: 4, flexDirection: 'row', borderBottomLeftRadius: 23, borderBottomRightRadius: 23, justifyContent: 'space-around', backgroundColor: 'rgb(248,248,248)' }}&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 25, width: 25, alignSelf: 'center' }} resizeMode='contain'  source={require('../assets/images/home-Restroom-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Restroom&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 25, width: 25, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/home-restaurant-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Restaurant&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 25, width: 25, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/home-carwash-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Carwash&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 25, width: 25, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/home-24-7-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;24/7&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                              &lt;/View&gt;
+                                                                        &lt;/View&gt;
+                                                                  &lt;/Swiper&gt;
+                                                                  &lt;/View&gt;
+                                                           
+                                                      &lt;/View&gt;
+                                          }
+                                    /&gt;}
+                                    {this.state.showSearchedResultStations &amp;&amp; &lt;FlatList 
+                                    data={ this.state.searchedResultsData}
+                                    showsVerticalScrollIndicator={false}
+<span class="fstat-no" title="function not covered" >                                    keyExtract</span>or={(item, ind<span class="cstat-no" title="statement not covered" >ex) =&gt; index.toString()}</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span>                                    ref={(ref) =&gt; { this.flatLis</span>tRef = ref; }}
+                                    ItemSep<span class="fstat-no" title="function not covered" >aratorComponent={() =&gt; </span>&lt;Vi<span class="cstat-no" title="statement not covered" >ew style={{ marginLeft: 0, marginRight: 0, height: 0.5, backgroundColor: '#ffffff' }} /&gt;}</span>
+<span class="fstat-no" title="function not covered" >                                    render</span>Item={({ item, inde<span class="cstat-no" title="statement not covered" >x }) =&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+                                          &lt;View style={stylesheet.flatlistContainerSearchResults}&gt;
+                                                &lt;View style={{flexDirection:'row',backgroundColor:'#FFFFFF',borderRadius:9,flex:0.7}}&gt;
+                                                      &lt;View style={{flex:0.6,paddingLeft:10,paddingTop:10,}}&gt;
+                                                            &lt;Text style={{fontSize:20,color:'black',fontWeight:'bold'}}&gt;Esso&lt;/Text&gt;
+                                                            &lt;Text style={{color:'#808080',fontWeight:'600',paddingTop:5}}&gt;1234 Main St.London UK.&lt;/Text&gt;
+                                                            &lt;Text style={{fontSize:10,color:'#808080',paddingTop:5}}&gt;&lt;Text style={{fontSize:10,color:'#808080',fontWeight:'700'}}&gt;OPEN &lt;Text style={{fontWeight:'bold'}}&gt;.&lt;/Text&gt; &lt;/Text&gt;Closes 11:00 PM&lt;/Text&gt;
+                                                            &lt;Text style={{fontSize:12,color:'#808080',paddingTop:5}}&gt;&lt;Text style={{color:'#808080',fontWeight:'600'}}&gt;Fule Type&lt;/Text&gt; Super Gasoline / Diesel&lt;/Text&gt;
+                                                      &lt;/View&gt;
+                                                      &lt;View style={{flex:0.4,alignItems:'center',paddingTop:10}}&gt;
+                                                      &lt;TouchableOpacity onPress={this.distanceButtonTappedToMap}&gt;
+                                                            &lt;View style={{backgroundColor:'#0D71B8',borderRadius:20,padding:10}}&gt;                 
+                                                                  &lt;Text style={{color:'#FFFFFF',fontSize:12}}&gt;Directions&lt;/Text&gt;
+                                                            &lt;/View&gt;
+                                                            &lt;/TouchableOpacity&gt;
+                                                            &lt;Text style={{fontSize:10,paddingTop:5,color:'#808080'}}&gt;{this.state.distanceType == 'km'? 0.16 +' KM' : (1/1.609).toFixed(2) +' Miles'}&lt;/Text&gt;
+                                                      &lt;/View&gt;
+                                                &lt;/View&gt;
+                                                &lt;View style={{flex:0.4}}&gt;
+                                                &lt;Swiper paginationStyle={{ height:60, alignSelf: 'center', justifyContent: 'center' }}&gt;
+                                                                        &lt;View style={{ flex: 1,  borderBottomLeftRadius: 9, borderBottomRightRadius: 9, justifyContent: 'space-around', backgroundColor: 'rgb(248,248,248)' }}&gt;
+                                                                              &lt;View style={{ flex: 4, flexDirection: 'row', borderBottomLeftRadius: 23, borderBottomRightRadius: 23, justifyContent: 'space-around', backgroundColor: 'rgb(248,248,248)' }}&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 30, width: 30, alignSelf: 'center' }} resizeMode='contain'  source={require('../assets/images/home-Restroom-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Restroom&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 30, width: 30, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/home-restaurant-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Restaurant&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 30, width: 30, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/home-carwash-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Carwash&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 30, width: 30, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/home-24-7-android.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;24/7&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                              &lt;/View&gt;
+                                                                        &lt;/View&gt;
+                                                                        &lt;View style={{ flex: 1,  borderBottomLeftRadius: 9, borderBottomRightRadius: 9, justifyContent: 'space-around', backgroundColor: 'rgb(248,248,248)' }}&gt;
+                                                                              &lt;View style={{ flex: 4, flexDirection: 'row', borderBottomLeftRadius: 23, borderBottomRightRadius: 23, justifyContent: 'space-around', backgroundColor: 'rgb(248,248,248)' }}&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 30, width: 30, alignSelf: 'center' }} resizeMode='contain'  source={require('../assets/images/truckshop.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Truck Stop&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 30, width: 30, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/coffee.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Coffee&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 30, width: 30, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/freewifi.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Free Wifi&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                                    &lt;View style={{flex:1,justifyContent:'center',alignItems:'center'}}&gt;
+                                                                                          &lt;Image style={{ height: 30, width: 30, alignSelf: 'center' }} resizeMode='contain' source={require('../assets/images/parking.png')} /&gt;
+                                                                                          &lt;Text style={{ fontSize: 13, }}&gt;Parking&lt;/Text&gt;
+                                                                                    &lt;/View&gt;
+                                                                              &lt;/View&gt;
+                                                                        &lt;/View&gt;
+                                                                  &lt;/Swiper&gt;
+                                                &lt;/View&gt;
+                                          &lt;/View&gt;
+                                          }
+                                    /&gt;}
+                  {this.state.fiterOptionsInScrollView &amp;&amp; 
+                  &lt;View style={stylesheet.modalContainer}&gt;
+                  
+                  &lt;ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{paddingBottom:10}} onScroll={(e)=&gt;{this.searchbar.blur}} &gt;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+                  &lt;View style={{flex:1}}&gt;
+                        &lt;View style={stylesheet.modalPrefferedStationContainer}&gt;
+                              &lt;Text style={{color:'black'}}&gt;{ConstantList.storeLocator.preferredStation}&lt;/Text&gt;
+                        &lt;/View&gt;
+                        &lt;View&gt;
+                              &lt;FlatList
+                                  data={this.state.prefferedStations}
+<span class="fstat-no" title="function not covered" >                                  keyExtractor</span>={(index,item)<span class="cstat-no" title="statement not covered" >=&gt;index.toString()}</span>
+                                  ItemSepar<span class="fstat-no" title="function not covered" >atorComponent={() =&gt; &lt;V</span>iew<span class="cstat-no" title="statement not covered" > style={stylesheet.modalFlatlistItemseperator} /&gt;}</span>
+<span class="fstat-no" title="function not covered" >                                  renderIt</span>em={({item})=&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+                                        &lt;View style={stylesheet.modalPrefferedStaionFlatlist}&gt;
+                                              &lt;View&gt;
+                                                    {
+                                                      item.category == 'esso' ? 
+                                                      &lt;Image style={{ width: 40, height: 40}} source={ require('../assets/images/esso_logo.png')}/&gt;
+                                                      :
+                                                      &lt;Image style={{ width: 40, height: 40}} source={ require('../assets/images/shell_logo.png')}/&gt;
+                                                      }
+                                              &lt;/View&gt;
+                                              &lt;View style={{paddingLeft:10}}&gt;
+                                                    &lt;Text style={{color:'black'}}&gt;{item.title}&lt;/Text&gt;
+                                                    &lt;Text&gt;{item.address}&lt;/Text&gt;
+                                              &lt;/View&gt;
+                                        &lt;/View&gt;
+                                  }
+                              /&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{padding:15}}&gt;
+                              &lt;Text style={{color:'black'}}&gt;{ConstantList.storeLocator.filterOptions}&lt;/Text&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{backgroundColor:'#FFFFFF',padding:15,flexDirection:'row',justifyContent:'space-between'}}&gt;
+                              &lt;Text style={{color:'black',fontSize:20,alignSelf:'center'}}&gt;{ConstantList.storeLocator.distance}&lt;/Text&gt;
+                              &lt;Picker style={{ width: 106}}
+                                    selectedValue={this.state.distance}
+<span class="fstat-no" title="function not covered" >                                    onValueChang</span>e={(itemValue, itemInde<span class="cstat-no" title="statement not covered" >x) =&gt; this.setState({distance: itemValue})}&gt;</span>
+                                    &lt;Picker.Item label="20KM" value="20" /&gt;
+                                    &lt;Picker.Item label="15KM" value="15" /&gt;
+                                    &lt;Picker.Item label="10KM" value="10" /&gt;
+                                    &lt;Picker.Item label="5KM" value="5" /&gt;
+                                    &lt;Picker.Item label="1KM" value="1" /&gt;
+                              &lt;/Picker&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{padding:15}}&gt;
+                              &lt;Text style={{color:'black'}}&gt;{ConstantList.storeLocator.amenities}&lt;/Text&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{flexDirection:'row',padding:10,alignItems:'center',backgroundColor:'#FFFFFF',borderBottomWidth:2,borderColor:'#FAFAFA'}}&gt;
+                              &lt;View style={{flex:0.3}}&gt;
+                                    &lt;Image style={{ width: 30, height: 30 }} resizeMode='contain' source={require('../assets/images/parking.png')} /&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1.7}}&gt;
+                                    &lt;Text style={{color:'black',fontSize:20,textAlign:'left'}}&gt;{ConstantList.storeLocator.parking}&lt;/Text&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1,alignItems:'flex-end'}}&gt;
+                                    &lt;Checkbox iconColor="#0f71b8" onPress={(e) =&gt; this.filterWith(<span class="fstat-no" title="function not covered" >"filterP</span>arki<span class="cstat-no" title="statement not covered" >ng")} checked={this.state.filterParking} /&gt;</span>
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{flexDirection:'row',padding:10,alignItems:'center',backgroundColor:'#FFFFFF',borderBottomWidth:2,borderColor:'#FAFAFA'}}&gt;
+                              &lt;View style={{flex:0.3}}&gt;
+                                    &lt;Image style={{ width: 30, height: 30 }} resizeMode='contain' source={require('../assets/images/restaurant.png')} /&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1.7}}&gt;
+                                    &lt;Text style={{color:'black',fontSize:20,textAlign:'left'}}&gt;Restaurant&lt;/Text&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1,alignItems:'flex-end'}}&gt;
+                                    &lt;Checkbox iconColor="#0f71b8" onPress={(e) =&gt; this.filterWith(<span class="fstat-no" title="function not covered" >"filterR</span>esta<span class="cstat-no" title="statement not covered" >urant")} checked={this.state.filterRestaurant}</span> /&gt;
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{flexDirection:'row',padding:10,alignItems:'center',backgroundColor:'#FFFFFF',borderBottomWidth:2,borderColor:'#FAFAFA'}}&gt;
+                              &lt;View style={{flex:0.3}}&gt;
+                              &lt;Image style={{ width: 30, height: 30 }} resizeMode='contain' source={require('../assets/images/Carwash.png')} /&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1.7}}&gt;
+                                    &lt;Text style={{color:'black',fontSize:20,textAlign:'left'}}&gt;{ConstantList.storeLocator.carwash}&lt;/Text&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1,alignItems:'flex-end'}}&gt;
+                                    &lt;Checkbox iconColor="#0f71b8" onPress={(e) =&gt; this.filterWith(<span class="fstat-no" title="function not covered" >"filterC</span>arwa<span class="cstat-no" title="statement not covered" >sh")}  checked={this.state.filterCarwash} /</span>&gt;
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{flexDirection:'row',padding:10,alignItems:'center',backgroundColor:'#FFFFFF',borderBottomWidth:2,borderColor:'#FAFAFA'}}&gt;
+                              &lt;View style={{flex:0.3}}&gt;
+                                    &lt;Image style={{ width: 30, height: 30 }} resizeMode='contain' source={require('../assets/images/shopping.png')} /&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1.7}}&gt;
+                                    &lt;Text style={{color:'black',fontSize:20,textAlign:'left'}}&gt;{ConstantList.storeLocator.shopping}&lt;/Text&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1,alignItems:'flex-end'}}&gt;
+                                    &lt;Checkbox iconColor="#0f71b8" onPress={(e) =&gt; this.filterWith(<span class="fstat-no" title="function not covered" >"filterS</span>hopp<span class="cstat-no" title="statement not covered" >ing")} checked={this.state.filterShopping} /</span>&gt;
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{flexDirection:'row',padding:10,alignItems:'center',backgroundColor:'#FFFFFF',borderBottomWidth:2,borderColor:'#FAFAFA'}}&gt;
+                              &lt;View style={{flex:0.3}}&gt;
+                                    &lt;Image style={{ width: 30, height: 30 }} resizeMode='contain' source={require('../assets/images/twentyfourhours.png')} /&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1.7}}&gt;
+                                    &lt;Text style={{color:'black',fontSize:20,textAlign:'left'}}&gt;{ConstantList.storeLocator.open}&lt;/Text&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1,alignItems:'flex-end'}}&gt;
+                                    &lt;Checkbox iconColor="#0f71b8" onPress={(e) =&gt; this.filterWith(<span class="fstat-no" title="function not covered" >"filterO</span>penA<span class="cstat-no" title="statement not covered" >llTimes")} checked={this.state.filterOpenAllTime</span>s} /&gt;
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{flexDirection:'row',padding:10,alignItems:'center',backgroundColor:'#FFFFFF',borderBottomWidth:2,borderColor:'#FAFAFA'}}&gt;
+                              &lt;View style={{flex:0.3,}}&gt;
+                                    &lt;Image style={{ width: 30, height: 30 }} resizeMode='contain' source={require('../assets/images/restroom.png')} /&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1.7,}}&gt;
+                                    &lt;Text style={{color:'black',fontSize:20,textAlign:'left',alignItems:'baseline'}}&gt;{ConstantList.storeLocator.restRoom}&lt;/Text&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1,alignItems:'flex-end'}}&gt;
+                                    &lt;Checkbox iconColor="#0f71b8" onPress={(e) =&gt; this.filterWith(<span class="fstat-no" title="function not covered" >"filterR</span>estr<span class="cstat-no" title="statement not covered" >ooms")}  checked={this.state.filterRestrooms}</span> /&gt;
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{flexDirection:'row',padding:10,alignItems:'center',backgroundColor:'#FFFFFF',borderBottomWidth:2,borderColor:'#FAFAFA'}}&gt;
+                              &lt;View style={{flex:0.3}}&gt;
+                                    &lt;Image style={{ width: 30, height: 30 }} resizeMode='contain' source={require('../assets/images/coffee.png')} /&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1.7}}&gt;
+                                    &lt;Text style={{color:'black',fontSize:20,textAlign:'left'}}&gt;Coffee&lt;/Text&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1,alignItems:'flex-end'}}&gt;
+                                    &lt;Checkbox iconColor="#0f71b8" onPress={(e) =&gt; this.filterWith(<span class="fstat-no" title="function not covered" >"filterC</span>offe<span class="cstat-no" title="statement not covered" >eAvailablity")} checked={this.state.filterCoffeeAvail</span>ablity} /&gt;
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{flexDirection:'row',padding:10,alignItems:'center',backgroundColor:'#FFFFFF',borderBottomWidth:2,borderColor:'#FAFAFA'}}&gt;
+                              &lt;View style={{flex:0.3}}&gt;
+                                    &lt;Image style={{ width: 30, height: 30 }} resizeMode='contain' source={require('../assets/images/freewifi.png')} /&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1.7}}&gt;
+                                    &lt;Text style={{color:'black',fontSize:20,textAlign:'left'}}&gt;Free Wifi&lt;/Text&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1,alignItems:'flex-end'}}&gt;
+                                    &lt;Checkbox iconColor="#0f71b8" onPress={(e) =&gt; this.filterWith(<span class="fstat-no" title="function not covered" >"filterW</span>ifiA<span class="cstat-no" title="statement not covered" >vailability")} checked={this.state.filterWifiAvailab</span>ility} /&gt;
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{flexDirection:'row',padding:10,alignItems:'center',backgroundColor:'#FFFFFF',borderBottomWidth:2,borderColor:'#FAFAFA'}}&gt;
+                              &lt;View style={{flex:0.3}}&gt;
+                                    &lt;Image style={{ width: 30, height: 30 }} resizeMode='contain' source={require('../assets/images/electriccharge.png')} /&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1.7}}&gt;
+                                    &lt;Text style={{color:'black',fontSize:20,textAlign:'left'}}&gt;Electric Car Charge&lt;/Text&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1,alignItems:'flex-end'}}&gt;
+                                    &lt;Checkbox iconColor="#0f71b8" onPress={(e) =&gt; this.filterWith(<span class="fstat-no" title="function not covered" >"filterC</span>arCh<span class="cstat-no" title="statement not covered" >arge")} checked={this.state.filterCarCharge} </span>/&gt;
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{flexDirection:'row',padding:10,alignItems:'center',backgroundColor:'#FFFFFF',borderBottomWidth:2,borderColor:'#FAFAFA'}}&gt;
+                              &lt;View style={{flex:0.3}}&gt;
+                                    &lt;Image style={{ width: 30, height: 30 }} resizeMode='contain' source={require('../assets/images/truckshop.png')} /&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1.7}}&gt;
+                                    &lt;Text style={{color:'black',fontSize:20,textAlign:'left'}}&gt;Truck Stop&lt;/Text&gt;
+                              &lt;/View&gt;
+                              &lt;View style={{flex:1,alignItems:'flex-end'}}&gt;
+                                    &lt;Checkbox iconColor="#0f71b8" onPress={(e) =&gt; this.filterWith(<span class="fstat-no" title="function not covered" >"filterT</span>ruck<span class="cstat-no" title="statement not covered" >Stop")} checked={this.state.filterTruckStop} </span>/&gt;
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                        &lt;View style={{backgroundColor:"#FFFFFF",paddingBottom:40}}&gt;
+                              &lt;Button title="Search" style={{borderRadius:20}} backgroundColor="#0f71b8" onPress={this.searchButtonPressed}
+                                     /&gt;
+                        &lt;/View&gt;
+                  &lt;/View&gt;
+                  &lt;/ScrollView&gt;
+                  &lt;/View&gt;
+                }
+                              &lt;/View&gt;
+                        &lt;/View&gt;
+                       
+                  &lt;/View&gt;
+            );
+      }<span class="cstat-no" title="statement not covered" ></span>
+}
+&nbsp;
+const mapStateToProps <span class="cstat-no" title="statement not covered" >= state =<span class="fstat-no" title="function not covered" >&gt; ({<span class="cstat-no" title="statement not covered" ></span></span></span>
+      stations : state.stationsReducer.allStations
+});
+&nbsp;
+const mapDispatchToProps <span class="cstat-no" title="statement not covered" >= dispatc<span class="fstat-no" title="function not covered" >h =&gt; ({<span class="cstat-no" title="statement not covered" ></span></span></span>
+      getStations : () =&gt; <span class="fstat-no" title="function not covered" >dispatch(han</span>dle<span class="cstat-no" title="statement not covered" >GetStations())</span>
+});
+&nbsp;
+<span class="cstat-no" title="statement not covered" >export default connect(mapStateToProps,mapDispatchToProps)(StoreLocator);<span class="cstat-no" title="statement not covered" ></span></span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 05 2018 19:09:36 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,816 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridListView Component ListPicker should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "column",
+            "marginTop": 40,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "flex-end",
+              "paddingRight": 16,
+              "paddingTop": -5,
+              "position": "absolute",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/images/Onboarding_close.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 32,
+                  "justifyContent": "flex-end",
+                  "resizeMode": "contain",
+                  "width": 32,
+                }
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "marginTop": 50,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/home/images/greenM.png",
+              }
+            }
+            style={
+              Object {
+                "height": 40,
+                "marginLeft": -50,
+                "width": 20,
+              }
+            }
+          />
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/home/images/blueMedal.png",
+              }
+            }
+            style={
+              Object {
+                "height": 40,
+                "marginLeft": 8,
+                "width": 22,
+              }
+            }
+          />
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/home/images/redM.png",
+              }
+            }
+            style={
+              Object {
+                "height": 40,
+                "marginLeft": 8,
+                "width": 23,
+              }
+            }
+          />
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/home/images/silver.png",
+              }
+            }
+            style={
+              Object {
+                "height": 40,
+                "marginLeft": 8,
+                "width": 22,
+              }
+            }
+          />
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/home/images/goldM.png",
+              }
+            }
+            style={
+              Object {
+                "height": 41,
+                "marginLeft": 5,
+                "marginRight": -50,
+                "width": 22,
+              }
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "column",
+            "marginTop": 12,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#000",
+              "fontSize": 20,
+              "fontWeight": "600",
+              "width": 190,
+            }
+          }
+        >
+          The EG Loyalty Club
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#000",
+              "fontWeight": "600",
+            }
+          }
+        >
+          More privileges, recognition and rewards.
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#237bc4",
+              "borderRadius": 15,
+              "marginTop": 10,
+              "opacity": 1,
+              "paddingHorizontal": 15,
+              "paddingVertical": 8,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 10,
+              }
+            }
+          >
+            Join Now
+             
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginLeft": 15,
+            "marginRight": 15,
+            "marginTop": 18,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgb(132,132,132)",
+              "fontSize": 15,
+              "paddingHorizontal": 7,
+            }
+          }
+        >
+          As a member of the EG Loyalty Club you can enjoy many privileges,including discounts from our partners and get you get access to the best offers and discount vouchers no matter where you are.
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "rgb(132,132,132)",
+              "fontSize": 15,
+              "marginTop": 10,
+              "paddingHorizontal": 7,
+            }
+          }
+        >
+          Your EG Club status is recognized across all partners in Europe and the US and you are entitled to a range of benefits,which are provided according to the following tier levels. The EG program is unique coverage,convenience store purchases,further enhancing customers benefits and experiences beyond the offerings of any competing program.
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#000",
+              "fontWeight": "500",
+              "marginTop": 10,
+              "paddingLeft": 6,
+            }
+          }
+        >
+          Start earning and save with EG Loyalty.
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "rgb(239, 239, 239)",
+            "borderBottomWidth": 0.8,
+            "borderTopColor": "rgb(239, 239, 239)",
+            "borderTopWidth": 0.8,
+            "marginTop": 30,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingBottom": 20,
+              "paddingTop": 20,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../src/assets/images/home/images/screenTwo/fifth.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 50,
+                      "marginLeft": 10,
+                      "marginRight": -50,
+                      "width": 50,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "column",
+                      "marginLeft": -70,
+                      "paddingLeft": 25,
+                      "paddingTop": 5,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#000",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    EG Executive Member
+                  </Text>
+                  <Text>
+                    100000+
+                  </Text>
+                </View>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "rgb(128, 128, 128)",
+                        "fontSize": 35,
+                      },
+                      Object {
+                        "marginTop": 10,
+                        "paddingRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "EvilIcons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View />
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "rgb(239, 239, 239)",
+            "borderBottomWidth": 0.8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingBottom": 20,
+              "paddingTop": 20,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../src/assets/images/home/images/screenTwo/fourth.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 50,
+                      "marginLeft": 10,
+                      "marginRight": -50,
+                      "width": 50,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "column",
+                      "marginLeft": -90,
+                      "paddingLeft": 20,
+                      "paddingTop": 5,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#000",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Platinum Member
+                  </Text>
+                  <Text>
+                    50001 - 100000
+                  </Text>
+                </View>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "rgb(128, 128, 128)",
+                        "fontSize": 35,
+                      },
+                      Object {
+                        "marginTop": 10,
+                        "paddingRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "EvilIcons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View />
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "rgb(239, 239, 239)",
+            "borderBottomWidth": 0.8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingBottom": 20,
+              "paddingTop": 20,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../src/assets/images/home/images/screenTwo/third.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 50,
+                      "marginLeft": 10,
+                      "marginRight": -50,
+                      "width": 50,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "column",
+                      "marginLeft": -120,
+                      "paddingLeft": 20,
+                      "paddingTop": 5,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#000",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Gold Member
+                  </Text>
+                  <Text>
+                    25001 - 50000
+                  </Text>
+                </View>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "rgb(128, 128, 128)",
+                        "fontSize": 35,
+                      },
+                      Object {
+                        "marginTop": 10,
+                        "paddingRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "EvilIcons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View />
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "rgb(239, 239, 239)",
+            "borderBottomWidth": 0.8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingBottom": 20,
+              "paddingTop": 20,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../src/assets/images/home/images/screenTwo/second.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 50,
+                      "marginLeft": 10,
+                      "marginRight": -50,
+                      "width": 50,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "column",
+                      "marginLeft": -110,
+                      "paddingLeft": 20,
+                      "paddingTop": 5,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#000",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Silver Member
+                  </Text>
+                  <Text>
+                    10001 - 25000
+                  </Text>
+                </View>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "rgb(128, 128, 128)",
+                        "fontSize": 35,
+                      },
+                      Object {
+                        "marginTop": 10,
+                        "paddingRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "EvilIcons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View />
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "rgb(239, 239, 239)",
+            "borderBottomWidth": 0.8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "paddingBottom": 20,
+              "paddingTop": 20,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../src/assets/images/home/images/screenTwo/first.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 50,
+                      "marginLeft": 10,
+                      "marginRight": -50,
+                      "width": 50,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "column",
+                      "marginLeft": -100,
+                      "paddingLeft": 20,
+                      "paddingTop": 5,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#000",
+                        "fontSize": 15,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Bronze Member
+                  </Text>
+                  <Text>
+                    0 - 10000
+                  </Text>
+                </View>
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "rgb(128, 128, 128)",
+                        "fontSize": 35,
+                      },
+                      Object {
+                        "marginTop": 10,
+                        "paddingRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "EvilIcons",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View />
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

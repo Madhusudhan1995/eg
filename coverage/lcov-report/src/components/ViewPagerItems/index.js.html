@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/ViewPagerItems/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/ViewPagerItems</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/20</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span>
+* @author Vineet Mishra &lt;vineet.m@photoninfotech.net&gt;
+* @version 1.0.0
+* @summary View pager items for the application.
+* @description The screen show's onboarding screens in swiper in the application. Their is a link for "JOIN NOW",
+* user can click on this link and navigate to registration.
+*/
+&nbsp;
+/**
+* @import React compoment from "react" for creating custom react component and to use lifecycle
+* hooks come along with react.
+* @import View, Text, TouchableOpacity, Image, Alert, ScrollView, Platform, KeyboardAvoidingView,
+* SafeAreaView from "react-native" for creating our view.
+* @import connect from "react-redux" for connecting react compoenent with redux which will convert
+* our component as container component.
+* @import compose from "redux" for removing the complexicity of higher order components used in the screen.
+* @import Field, reduxForm from "redux-form" for composing the form and for getting the form value in
+* and object. also it simplifies form validation.
+* @import validator from "validator" for validating the form fields which requires complex regex
+* i.e., emailid, dateformat etc.
+* @import LoginButton, AccessToken, GraphRequest, GraphRequestManager, LoginManager from "react-native-fbsdk"
+* for implemnting login with facebook.
+* @import Icon from "react-native-vector-icons/FontAwesome" to use font icons in this screen whereever required.
+*@import KeyboardAwareScrollView from 'react-native-keyboard-aware-scroll-view' tomove the view up when keyboard open.
+*/
+import React,<span class="cstat-no" title="statement not covered" > { Component } from 'react';</span>
+import {Text,View,T<span class="cstat-no" title="statement not covered" >ouchableOpacity, Image, </span>Dimensions} from 'react-native';
+import { naviga<span class="cstat-no" title="statement not covered" >teTo } from "../../helper</span>s";
+/**
+* @import screenstyles object. This object have all the styles written for the screens.
+* the styles have been defined in a file named "screenStyles" which is again importing
+* an object from theme file when our theme related styles have been defined.
+*/
+import componentstyles <span class="cstat-no" title="statement not covered" >from "../../styles/componentStyles";</span>
+import ScreenStyles <span class="cstat-no" title="statement not covered" >from '../../styles/screenStyles';</span>
+// import - Global resources
+import GLOBALS <span class="cstat-no" title="statement not covered" >from '../../constants/Globals';<span class="cstat-no" title="statement not covered" ></span></span>
+/**
+* Represents ViewPagerItems.
+* @class ViewPagerItems
+* @extends Component
+*/
+&nbsp;
+// Get device width, height in variable's
+var windowWidth = <span class="cstat-no" title="statement not covered" >Dimensions.get('window').width;</span>
+var windowHeight = <span class="cstat-no" title="statement not covered" >Dimensions.get('window').height;</span>
+&nbsp;
+/**
+* @class ViewPagerItems
+* @extends Component
+* @summary Represents Onboarding view items class.
+* @description The screen show's onboarding screens items in swiper in the application.
+*/
+class ViewPagerIt<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >em</span>s extends Component {<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+    /**
+    * @constructor It is initializing the state with default properties.
+    * isPasswordShown: Boolean property for hiding and showing password value.
+    * pickerViewHideIOS: Boolean property for showing and hiding language picker popup.
+    * language: String property for default language.
+    * pickerValue: String property for storing the language picker value.
+    * name: String property for storing the username comes after facebook login.
+    * pic: String property for Storing the profile pic path comes after facebook login
+    */
+    constru<span class="fstat-no" title="function not covered" >ctor(props){<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >        super(props);</span>
+<span class="cstat-no" title="statement not covered" >        this.state = {</span>
+            title       : props.title,
+            desc        : props.desc,
+            offset      : props.offset,
+            imgSrc      : props.imgSrc,
+        };
+<span class="cstat-no" title="statement not covered" >        this.onCloseClick = this.onCloseClick.bind(this);<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    }<span class="fstat-no" title="function not covered" ></span></span>
+&nbsp;
+    /**
+    * @function onCloseClick
+    * This method calls when user clicks on icon close
+    */
+    onCloseClick() {
+<span class="cstat-no" title="statement not covered" >        navigateTo("prehome");</span>
+    }<span class="fstat-no" title="function not covered" ></span>
+&nbsp;
+    /**
+    * @function render
+    * React render method for rendering the native elements
+    */
+    render() {
+<span class="cstat-no" title="statement not covered" >        return (</span>
+            &lt;View style={componentstyles.viewPagerItemContainerStyle}&gt;
+&nbsp;
+                &lt;View style={[componentstyles.viewPagerItemImageContainerStyle, {height: windowHeight * .64}]}&gt;
+                    &lt;Image style={componentstyles.viewPagerItemImageViewStyle} resizeMode={'cover'} source={ this.state.imgSrc } /&gt;
+                    &lt;View style={componentstyles.viewPagerItemLogoConatinerStyle}&gt;
+                        &lt;Image style={componentstyles.viewPagerItemLogoStyle} source={require('./../../assets/images/onboarding_logo_main.png')} /&gt;
+                    &lt;/View&gt;
+                    &lt;View style={componentstyles.viewPagerItemCloseIconConatinerStyle}&gt;
+                    &lt;TouchableOpacity onPress={this.onCloseClick}&gt;
+                        &lt;Image style={componentstyles.viewPagerCloseIcon} source={require('./../../assets/images/Onboarding_close.png')} /&gt;
+                    &lt;/TouchableOpacity&gt;
+                    &lt;/View&gt;
+                &lt;/View&gt;
+&nbsp;
+                &lt;View style={[componentstyles.viewPagerItemTextConatinerStyle ,{height: windowHeight * .36}]}&gt;
+                &lt;Text style={componentstyles.viewpagerItemTextStyle}&gt;{this.state.title}&lt;/Text&gt;
+                &lt;Text style={componentstyles.viewpagerItemDescTextStyle}&gt;{this.state.desc}&lt;/Text&gt;
+                &lt;View style={[componentstyles.viewpagerLoginBtnStyle]}&gt;
+                    &lt;View style={{padding : 0}}&gt;
+                        &lt;TouchableOpacity onPress={() =&gt; navigateTo("register")}&gt;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+                            &lt;Text style={ScreenStyles.viewPaferLoginTextFont}&gt;{GLOBALS.TEXT.LOGIN}&lt;/Text&gt;
+                        &lt;/TouchableOpacity&gt;
+                    &lt;/View&gt;
+                &lt;/View&gt;
+                &lt;/View&gt;
+&nbsp;
+            &lt;/View&gt;
+        );
+    }<span class="cstat-no" title="statement not covered" ></span>
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >export default <span class="cstat-no" title="statement not covered" ></span>ViewPagerItems;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 05 2018 19:09:36 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

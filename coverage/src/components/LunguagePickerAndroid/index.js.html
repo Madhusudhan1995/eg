@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/LunguagePickerAndroid/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/LunguagePickerAndroid</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/61</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span>
+* @author machavarapuadin &lt;machavarapuadin@photoninfotech.net&gt;
+* @version 1.0.2
+* @summary Custom LunguagePickerAndroid component.
+* @description A custom LunguagePickerAndroid component is being made so that it can be used everywhere..
+*/
+&nbsp;
+/**
+* @import React compoment from "react" for creating custom react component and to use lifecycle
+* hooks come along with react.
+* @import View,StyleSheet,Text, ScrollView,TextInput,DeviceEventEmitter
+* from "react-native" for creating our view.
+*/
+import React,<span class="cstat-no" title="statement not covered" > {Component} from 'react';</span>
+import {Text, View,<span class="cstat-no" title="statement not covered" >Image,FlatList,Touchable</span>Opacity, DeviceEventEmitter} from 'react-native';
+&nbsp;
+ /**
+* @import screenstyles object. This object have all the styles written for the screens.
+* the styles have been defined in a file named "screenStyles" which is again importing
+* an object from theme file when our theme related styles have been defined.
+*/
+import styles from "../../styles/Lu<span class="cstat-no" title="statement not covered" >nguagePickerAndroidStyles";<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+var getIndexFromFlatList = <span class="cstat-no" title="statement not covered" >-1</span>
+&nbsp;
+const lanaguageData <span class="cstat-no" title="statement not covered" >= [</span>
+  {
+    languageName : "English (EN)",
+    image : require('../../assets/images/Login/Group.png'),
+  },
+  {
+    languageName : "Dutch (DU)",
+    image : require('../../assets/images/Login/Oval.png'),
+  },
+  {
+    languageName : "French (FR)",
+    image : require('../../assets/images/Login/Oval.png'),
+  }
+];
+&nbsp;
+/**
+* @class LunguagePickerAndroid
+* @extends Component
+* @summary Represents LunguagePickerAndroid Component.
+* @description This is a LunguagePickerAndroid Component. It extands react Component class for using the functions comes along with it.
+*/
+ class LunguagePickerAnd<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >ro</span>id extends Component <span class="cstat-no" title="statement not covered" >{</span></span>
+    /**
+    * @constructor It is initializing the state with default properties.
+    */
+  construct<span class="fstat-no" title="function not covered" >or(props) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    super(props);<span class="cstat-no" title="statement not covered" ></span></span>
+    this.state = {
+    modalVisible: false,
+    data : lanaguageData,
+    lanaguageText:"English (EN)",
+    showdatePicker : false 
+  }
+};
+&nbsp;
+/**
+    * @function lungugaePikerOkButtonTapped: When user selected item from lunaguage picker and user needs to confirm with clik on Ok Button.
+    * It send action using DeviceEventEmitter to login screen with selected values from lunguage picker.
+    */
+  lungugaePikerOkButtonTapped = ()<span class="fstat-no" title="function not covered" > =</span>&gt;  {
+    var lanaguageSelectedText = ""<span class="cstat-no" title="statement not covered" >;</span>
+    var postdata = [.<span class="cstat-no" title="statement not covered" >..this.state.data];</span>
+    po<span class="cstat-no" title="statement not covered" >stdata.forEach(fu<span class="fstat-no" title="function not covered" >nc</span>tion(element,index) {</span>
+      var targetPost = po<span class="cstat-no" title="statement not covered" >stdata[getIndexFromFlatList];</span>
+      if<span class="cstat-no" title="statement not covered" > (getIndexFromFlatList === index){</span>
+        la<span class="cstat-no" title="statement not covered" >naguageSelectedText = targetPost.languageName</span>
+      }
+    });
+    if<span class="cstat-no" title="statement not covered" > (lanaguageSelectedText === ""){</span>
+      la<span class="cstat-no" title="statement not covered" >naguageSelectedText  = this.state.lanaguageText;</span>
+    }
+    th<span class="cstat-no" title="statement not covered" >is.setState({lanaguageText:lanaguageSelectedText,showdatePicker:true });</span>
+<span class="cstat-no" title="statement not covered" >      DeviceEventEmitter.emit("okClicked", lanaguageSelectedText);</span>
+  }<span class="cstat-no" title="statement not covered" ></span>
+   /**
+    * @function lungugaePikerCancelButtonTapped: It gets called when user tapped on cancel
+    * It send action using DeviceEventEmitter to login screen along with parameter lanaguageText value.
+    * Hide the lunguage picker after that.
+    */
+  lungugaePikerCancelButtonTapped = ()<span class="fstat-no" title="function not covered" > =</span>&gt; {
+    th<span class="cstat-no" title="statement not covered" >is.setState({showdatePicker:true });</span>
+&nbsp;
+    De<span class="cstat-no" title="statement not covered" >viceEventEmitter.emit("okClicked", this.state.lanaguageText);</span>
+  }<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+  /**
+    * @function selectedItemFromFlatList:It get called When user selected item from in the flatlist.
+    * It will return the item &amp; particular index values from flatlist.
+    */
+   selectedItemFromFlatList(item,indexValues){
+<span class="cstat-no" title="statement not covered" >         getIndexFromFlatList = indexValue</span>s;
+        var postdata <span class="cstat-no" title="statement not covered" >= [...this.state.data];</span>
+<span class="cstat-no" title="statement not covered" >        postdata.forEac<span class="fstat-no" title="function not covered" >h(</span>function(element,index) {</span>
+          var targetPost <span class="cstat-no" title="statement not covered" >= postdata[index</span>];
+<span class="cstat-no" title="statement not covered" >          if (indexValues === index){</span>
+<span class="cstat-no" title="statement not covered" >            targetPost.image = require('../../assets/images/Login/Group.png')</span>
+          }else{
+<span class="cstat-no" title="statement not covered" >            targetPost.image = require('../../assets/images/Login/Oval.png')</span>
+          }
+        });
+<span class="cstat-no" title="statement not covered" >        this.setState({ data: postdata })</span>;
+  }<span class="fstat-no" title="function not covered" ></span>
+  /**
+    * @function renderMessageForFlatList : It get called whe the render method called.
+    * It will return the UI with radio &amp; text conetent to flatlist.
+    */
+  renderMessageForFlatList ( it<span class="cstat-no" title="statement not covered" >em, i</span>ndex ) {   
+<span class="cstat-no" title="statement not covered" >      return(</span>
+        &lt;TouchableOpacity onPress={() =&gt; this.selectedItemFromFlatList(item,index)}&gt;<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+        &lt;View style={styles.flatlistContainer}&gt;
+            &lt;View style={styles.radioButtonView}&gt;
+            &lt;Image source={item.image} style={styles.radioImageStyles} /&gt; 
+            &lt;/View&gt;
+            &lt;View style={styles.textContentView}&gt;
+              &lt;Text style={styles.FLTextStyles}&gt;{item.languageName}&lt;/Text&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+          &lt;/TouchableOpacity&gt;
+       )
+  }<span class="fstat-no" title="function not covered" ></span>
+  /**
+    * @function renderDatePickerFlatList : It get called whe the render method called.
+    * It will return the FlatList.
+    */
+   renderDatePicke<span class="cstat-no" title="statement not covered" >rFlat</span>List(){
+     r<span class="cstat-no" title="statement not covered" >eturn(</span>
+      &lt;FlatList style={{backgroundColor:'white'}}
+      data={this.state.data}
+      keyExtractor={(item, index)<span class="fstat-no" title="function not covered" > =&gt; index.toS</span>tring()}<span class="cstat-no" title="statement not covered" ></span>
+      renderItem={( {item, inde<span class="fstat-no" title="function not covered" >x} ) =&gt; thi</span>s.renderMessageFor<span class="cstat-no" title="statement not covered" >FlatList(i</span>tem,inde<span class="cstat-no" title="statement not covered" >x)}<span class="cstat-no" title="statement not covered" ></span></span>
+    /&gt;
+     )
+   }<span class="fstat-no" title="function not covered" ></span>
+    /**
+    * @function renderAndroidDataPickerBottomBar : It get called whe the render method called.
+    * It will return the UI for bottom headerbar with ok &amp; cancel buttons for lunguage picker.
+    */
+   renderAndroidDataPickerBottomBar(){
+     r<span class="cstat-no" title="statement not covered" >eturn(</span>
+      &lt;View style={styles.bottomHeaderView}&gt;
+     
+      &lt;TouchableOpacity onPress={this.lungugaePikerCancelButtonTapped}&gt;
+      &lt;Text style={styles.cancelButtonStyles}&gt;CANCEL&lt;/Text&gt;
+      &lt;/TouchableOpacity&gt;
+     
+      &lt;TouchableOpacity onPress={this.lungugaePikerOkButtonTapped}&gt;
+      &lt;Text style={styles.okButtonStyles}&gt;OK&lt;/Text&gt;
+      &lt;/TouchableOpacity&gt;
+    &lt;/View&gt;
+     )
+   }<span class="fstat-no" title="function not covered" ></span>
+   /**
+    * @function renderDatePickerView : It get called whe the render method called.
+    * It will return the UI and transperant background view with lunguage picker.
+    */
+   renderDatePickerView(){
+    if<span class="cstat-no" title="statement not covered" >(!this.state.showdatePicker){</span>
+     ret<span class="cstat-no" title="statement not covered" >urn(</span>
+    &lt;View style={styles.tranperantView}&gt;
+    &lt;View style={styles.pickerViewStyles}&gt;
+    &lt;Text style={styles.headerView}&gt;Select Languages&lt;/Text&gt;
+      {this.renderDatePickerFlatList()}
+      {this.renderAndroidDataPickerBottomBar()}
+     &lt;/View&gt;
+     &lt;/View&gt;
+     )
+    }
+   }<span class="fstat-no" title="function not covered" ></span>
+    /**
+    * @function render: Its one of the main functions of react component. It renders the JSX on the screen
+    * In render() we are calling "renderDatePickerView" to lunguage picker for android.
+    */
+  render() {
+    re<span class="cstat-no" title="statement not covered" >turn (</span>
+      &lt;View style={styles.appContainer}&gt;
+             {this.renderDatePickerView()}
+      &lt;/View&gt;
+    );
+  }<span class="cstat-no" title="statement not covered" ></span>
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >export default Lunguag<span class="cstat-no" title="statement not covered" ></span>ePickerAndroid;</span>
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 05 2018 19:09:36 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

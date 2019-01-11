@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/screens/QRCodeScanning.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/screens</a> QRCodeScanning.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/96</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/72</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span></span>
+* @author Machavarapu Adinarayana &lt;machavarapuadin@photoninfotech.net&gt;
+* @version 1.0.2
+* @summary Adding QRCode Scanning for the application.
+* @description The screen would be able to scan the QR code on the fuel station and know which pump am I using for fuelling
+* The screen uses react and third party npm modules and also few custom components.
+*/
+&nbsp;
+/**
+@import React compoment from "react" for creating custom react component and to use lifecycle
+* hooks come along with react.
+* @import Text, TouchableOpacity, Linking, Alert, View, SafeAreaView, ScrollView, Image, FlatList
+* from "react-native" for creating our view.
+* @import connect from "react-redux" for connecting react compoenent with redux which will convert
+* our component as container component.
+* @import compose from "redux" for removing the complexicity of higher order components used in the screen.
+* @import Permissions from "react-native-permissions" for adding React-native permissions.
+* @import QRCodeScanner from "react-native-qrcode-scanner" for adding QrCodeScanner Permissions.
+* @import Field, reduxForm from "redux-form" and getFormValuesfor composing the form and for getting the form value in
+* and object. also it simplifies form validation.
+*/
+&nbsp;
+import React,<span class="cstat-no" title="statement not covered" > { Component } from "react";</span>
+import { Text, Touc<span class="cstat-no" title="statement not covered" >hableOpacity, Alert, Vie</span>w, SafeAreaView, ScrollView, Image, FlatList,DeviceEventEmitter } from 'react-native';
+import { connect }<span class="cstat-no" title="statement not covered" > from 'react-redux';</span>
+import { comp<span class="cstat-no" title="statement not covered" >ose } from "redux</span>";
+import Permissions from 'react<span class="cstat-no" title="statement not covered" >-native-permissions'</span>
+import QRCodeScanner from 'react<span class="cstat-no" title="statement not covered" >-native-qrcode-scanner';</span>
+import { reduxFor<span class="cstat-no" title="statement not covered" >m, getFormValues } fro</span>m "redux-form";
+import { Actions } from 'reac<span class="cstat-no" title="statement not covered" >t-native-router-flux';</span>
+&nbsp;
+/**
+* @import {navigateTo} from "helpers" file. "helpers" file has
+* reusable functions written in it.
+* @description navigateTo(scene): It takes screen name as a parameter and navigates to the respective screen.
+* user goes to the FuelFilling screen and it updates on the client side as the app has been installed so that we
+* make sure user does not see the onboarding screen every time it launches the app.
+*/
+import { naviga<span class="cstat-no" title="statement not covered" >teTo } from "../helper</span>s";
+import ConstantsList from<span class="cstat-no" title="statement not covered" > "../constants/lagunage_constant";</span>
+&nbsp;
+/**
+* @import screenstyles object. This object have all the styles written for the screens.
+* the styles have been defined in a file named "screenStyles" which is again importing
+* an object from theme file when our theme related styles have been defined.
+*/
+import screenS<span class="cstat-no" title="statement not covered" >tyles from "../styles";<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+/**
+* @class QRCodeScanning
+* @extends Component
+* @summary Represents QRCodeScanning class.
+* @description This is a QRCodeScanning class. It extands react Component class for using the functions comes along with it.
+*/
+&nbsp;
+class QRCodeScann<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >in</span>g extends Component {<span class="cstat-no" title="statement not covered" ></span></span>
+//Test
+  construct<span class="fstat-no" title="function not covered" >or(props) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >    super(props);</span>
+<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+      data: this.initialState,
+      qrcodeScanningStatus: false,
+    }
+<span class="cstat-no" title="statement not covered" >    this.hideAndShowConfirmButton = this.hideAndShowConfirmButton.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this._requestPermission = this._requestPermission.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this._checkCameraAndPhotos = this._checkCameraAndPhotos.bind(this);<span class="cstat-no" title="statement not covered" ></span></span>
+  }<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+  get initialState() {
+    return ConstantsList.QRCodeScanning.scanningQRCodeData;
+  }
+  resetBuilder() {
+    th<span class="cstat-no" title="statement not covered" >is.setState({data : this.initialState,qrcodeScanningStatus: false});</span>
+    //this.scanner.reactivate();
+}<span class="fstat-no" title="function not covered" ></span>
+&nbsp;
+componentWillMount<span class="cstat-no" title="statement not covered" > () {</span>
+  Devi<span class="cstat-no" title="statement not covered" >ceEventEmitter.addListener('paymentSuccess', (date) =&gt; {<span class="fstat-no" title="function not covered" ></span></span>
+    this<span class="cstat-no" title="statement not covered" >.resetBuilder();</span>
+  });
+}<span class="fstat-no" title="function not covered" ></span>
+  /**
+   * @function onSuccess
+   * QR Code Scanning successfully it will returns the datails of QR Code
+   * QR Code Scanning fails it will throw a error 
+   */
+  onSuccess(e) {
+   
+   /* var dataList = [...this.state.data]
+    console.log('data after:: ', this.state.data);
+    var pumpDetails = {
+      "cardName": "Shell Station, 1234 Main St. London, UK",
+      "cardNumber": "Pump 3",
+      "image": require('../assets/images/QRCodeScanning/pumpDetailsLatest.png')
+    };
+    console.log('data after:: ', this.state.data.length);
+    if  (this.state.data.length == 1){
+    var dataList = [...this.state.data]
+    dataList.push(pumpDetails)
+    this.setState({ data: dataList });
+    this.setState({ qrcodeScanningStatus: true });
+    }*/
+    na<span class="cstat-no" title="statement not covered" >vigateTo('postScussfullyQRCodeScanning');</span>
+    // console.log(e);
+    // Linking
+    //   .openURL(e.data)
+    //   .catch(err =&gt; console.error('An error occured', err));
+  }<span class="fstat-no" title="function not covered" ></span>
+&nbsp;
+  /**
+  * @function componentDidMount: React lifecycle function. It gets called before render() and first
+  * time when component loads.
+  * @function Permissions: It returns the QR Code Scanner Permissions
+  */
+  componentDidMoun<span class="cstat-no" title="statement not covered" >t() {</span>
+    Pe<span class="cstat-no" title="statement not covered" >rmissions.check('photo').then(response =&gt; {<span class="fstat-no" title="function not covered" ></span></span>
+      // Response is one of: 'authorized', 'denied', 'restricted', or 'undetermined'
+      th<span class="cstat-no" title="statement not covered" >is.setState({ photoPermission: response })</span>
+    })
+    const { navigat<span class="cstat-no" title="statement not covered" >ion } = this.props;</span>
+    na<span class="cstat-no" title="statement not covered" >vigation.addListener('willFocus', ()<span class="fstat-no" title="function not covered" > =</span>&gt;<span class="cstat-no" title="statement not covered" ></span></span>
+      this.setState({ focusedScreen: true })
+    );
+    na<span class="cstat-no" title="statement not covered" >vigation.addListener('willBlur', ()<span class="fstat-no" title="function not covered" > =</span>&gt;<span class="cstat-no" title="statement not covered" ></span></span>
+      this.setState({ focusedScreen: false })
+    );
+  }<span class="fstat-no" title="function not covered" ></span>
+&nbsp;
+  /**
+  * @function _requestPermission: Its called when user taps the scan Barcode/QR code.and
+  * It updates the state and it will go to respective navigation screen.
+  */
+  _requestPermissi<span class="cstat-no" title="statement not covered" >on ()</span>{
+    Pe<span class="cstat-no" title="statement not covered" >rmissions.request('photo').then(response =&gt; {<span class="fstat-no" title="function not covered" ></span></span>
+      // Returns once the user has chosen to 'allow' or to 'not allow' access
+      // Response is one of: 'authorized', 'denied', 'restricted', or 'undetermined'
+      th<span class="cstat-no" title="statement not covered" >is.setState({ photoPermission: response })</span>
+    })
+  }<span class="fstat-no" title="function not covered" ></span>
+&nbsp;
+  /**
+   * @function _checkCameraAndPhotos: Its called when the user taps Camera
+   * Check the status of multiple Camera and Photo permissions
+   */
+  _checkCameraAndP<span class="cstat-no" title="statement not covered" >hotos</span>(){
+    Pe<span class="cstat-no" title="statement not covered" >rmissions.checkMultiple(['camera', 'photo']).then(response =&gt; {<span class="fstat-no" title="function not covered" ></span></span>
+      //response is an object mapping type to permission
+      th<span class="cstat-no" title="statement not covered" >is.setState({</span>
+        cameraPermission: response.camera,
+        photoPermission: response.photo,
+      })
+    })
+  }<span class="fstat-no" title="function not covered" ></span>
+&nbsp;
+  /**
+   * @function _alertForPhotosPermission
+   * This is a common pattern when asking for permissions.
+   * iOS only gives you once chance to show the permission dialog,
+   * after which the user needs to manually enable them from settings.
+   * The idea here is to explain why we need access and determine if
+   * the user will say no, so that we don't blow our one chance.
+   * If the user already denied access, we can ask them to enable it from settings.
+   */
+  _alertForPhotosPermission() {
+    Al<span class="cstat-no" title="statement not covered" >ert.alert(</span>
+      'Can we access your photos?',
+      'We need access so you can set your profile pic',[
+        {
+          text: 'No way',
+          onPress: () =&gt; {<span class="fstat-no" title="function not covered" > },//con</span>sole.log('Permission denied'),
+          style: 'cancel',
+        },
+        this.state.photoPermission == 'undetermined'
+          ? { text: 'OK', onPress: this._requestPermission }
+          : { text: 'Open Settings', onPress: Permissions.openSettings },
+      ],
+    )
+  }<span class="fstat-no" title="function not covered" ></span>
+&nbsp;
+  /**
+   * @function closeButtonTapped: Its called when the user taps Clicks Close Button
+   * It updates the state  and Navigate to Respective Home Screen
+   */
+  closeButtonTapped() {
+    na<span class="cstat-no" title="statement not covered" >vigateTo("home");</span>
+  }<span class="fstat-no" title="function not covered" ></span>
+&nbsp;
+  /**
+  * @function confirmButtonTapped: Its called when the user tap on Confirm Button.
+  * It updates the state and Navigate to Respective FuelFilling Screen.
+  */
+  confirmButtonTapped() {
+    na<span class="cstat-no" title="statement not covered" >vigateTo("fuelFilling");</span>
+  }<span class="fstat-no" title="function not covered" ></span>
+  /**
+  * @function paymentUpdateDetailsBtntapped: Its called when the user tap on the payment section in flatlist
+  * It updates the state and Navigate to Respective wallet Screen to update payment details
+  */
+  paymentUpdateDetailsBtntapped(item,index){
+    //alert(index);
+    if<span class="cstat-no" title="statement not covered" > (index == 0) {</span>
+       n<span class="cstat-no" title="statement not covered" >avigateTo("wallet");</span>
+    }
+  }<span class="fstat-no" title="function not covered" ></span>
+  /**
+    * @function hideAndShowConfirmButton: By defaults this method will call 
+    * It depands on the qrcodescanning status show &amp; hide confirm button
+    */
+  hideAndShowConfirmButton() {
+    if<span class="cstat-no" title="statement not covered" > (this.state.qrcodeScanningStatus) {</span>
+      re<span class="cstat-no" title="statement not covered" >turn (</span>
+        &lt;View style={screenStyles.QRSconfirmButton}&gt;
+          &lt;TouchableOpacity onPress={this.confirmButtonTapped}&gt;
+            &lt;Text style={screenStyles.QRSconfirmTextBold}&gt;Confirm&lt;/Text&gt;
+          &lt;/TouchableOpacity&gt;
+        &lt;/View&gt;
+      )
+    }
+  }<span class="fstat-no" title="function not covered" ></span>
+  qrcodeScanning()<span class="cstat-no" title="statement not covered" >{</span>
+&nbsp;
+    co<span class="cstat-no" title="statement not covered" >nst { hasCa</span>meraPermission, focuse<span class="cstat-no" title="statement not covered" >dScreen } = this.state;<span class="cstat-no" title="statement not covered" ></span></span>
+    if<span class="cstat-no" title="statement not covered" > (hasCameraPermission === null) {</span>
+      re<span class="cstat-no" title="statement not covered" >turn &lt;View /&gt;;</span>
+    } else if<span class="cstat-no" title="statement not covered" > (hasCameraPermission === false) {</span>
+      re<span class="cstat-no" title="statement not covered" >turn &lt;Text&gt;No access to camera&lt;/Text&gt;;</span>
+    } else if<span class="cstat-no" title="statement not covered" > (focusedScreen){</span>
+      re<span class="cstat-no" title="statement not covered" >turn ( &lt;QRCodeScanner ref={(node) =&gt; { this.scanner = node }} reactivate containerStyle<span class="fstat-no" title="function not covered" >={sc</span>reenSty<span class="cstat-no" title="statement not covered" >les.QRScanningViewBorde</span>rRadius}</span>
+      onRead={this.onSuccess.bind(this)}
+    /&gt;);
+    } else {
+      re<span class="cstat-no" title="statement not covered" >turn &lt;View /&gt;;</span>
+    }
+  }<span class="fstat-no" title="function not covered" ></span>
+&nbsp;
+  /**
+  * @function render: Its one of the main functions of react component. It renders the JSX on the screen
+  * In render() we are fetching data from the props and passing it to "onPress" event of then
+  */
+  render() {<span class="cstat-no" title="statement not covered" ></span>
+    co<span class="cstat-no" title="statement not covered" >nst { hasCa</span>meraPermission, focuse<span class="cstat-no" title="statement not covered" >dScreen } = this.state;<span class="cstat-no" title="statement not covered" ></span></span>
+    if<span class="cstat-no" title="statement not covered" > (hasCameraPermission === null) {</span>
+      re<span class="cstat-no" title="statement not covered" >turn &lt;View /&gt;;</span>
+    } else if<span class="cstat-no" title="statement not covered" > (hasCameraPermission === false) {</span>
+      re<span class="cstat-no" title="statement not covered" >turn &lt;Text&gt;No access to camera&lt;/Text&gt;;</span>
+    } else if<span class="cstat-no" title="statement not covered" > (focusedScreen){</span>
+      re<span class="cstat-no" title="statement not covered" >turn ( &lt;SafeAreaView style={screenStyles.QRScontainerStyle}&gt;</span>
+        &lt;View style={screenStyles.QRScontainerStyle}&gt;
+          &lt;View style={screenStyles.QRScanningViewStyle}&gt;
+            &lt;TouchableOpacity style={screenStyles.QRScloseButton} onPress={this.closeButtonTapped}&gt;
+              &lt;Image source={require('../assets/images/Close.png')} style={screenStyles.QRScloseImage} /&gt;
+            &lt;/TouchableOpacity&gt;
+            &lt;QRCodeScanner ref={(node) =&gt; { this.scanner = node }} reactivate={true} con<span class="fstat-no" title="function not covered" >tain</span>erStyle<span class="cstat-no" title="statement not covered" >={screenStyles.QRScanni</span>ngViewBorderRadius}
+              onRead={this.onSuccess.bind(this)}
+            /&gt;
+          &lt;/View&gt;
+          &lt;View style={screenStyles.QRScontainerStyle}&gt;
+            &lt;ScrollView&gt;
+              &lt;View style={screenStyles.QRScontainerStyle1}&gt;
+                &lt;Image source={require('../assets/images/QRCodeScanning/ScanqrcodeLatest.png')} style={screenStyles.QRSqrcodeImage} /&gt;
+                &lt;Text style={screenStyles.QRSscanqrcodeText}&gt;{ConstantsList.QRCodeScanning.ScanQRCode}&lt;/Text&gt;
+                &lt;Text style={screenStyles.QRSnormaltextFontSize}&gt;{ConstantsList.QRCodeScanning.ScanQRCodeText}&lt;/Text&gt;
+                &lt;Text style={screenStyles.QRSnormaltextFontSize1}&gt;{ConstantsList.QRCodeScanning.ScanQRCodeText1}&lt;/Text&gt;
+                &lt;FlatList style={screenStyles.QRSflatListStyle}
+                  data={this.state.data}
+                  keyExtractor={(<span class="fstat-no" title="function not covered" >item, index) </span>=&gt; index.toStr<span class="cstat-no" title="statement not covered" >ing()}</span>
+                  ref={(<span class="fstat-no" title="function not covered" >ref)</span> =&gt; { th<span class="cstat-no" title="statement not covered" >is.flatListRef = ref; }}</span>
+                  // ItemSeparatorComponent={() =&gt; &lt;View style={screenStyles.QRSflatListSeparator} /&gt;}
+                  renderItem={(<span class="fstat-no" title="function not covered" >{ item, ind</span>ex }) =&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+                    &lt;TouchableOpacity onPress={() =&gt; this.paymentUpdateDetailsBtntapped(item, <span class="fstat-no" title="function not covered" >index)}&gt;<span class="cstat-no" title="statement not covered" ></span></span>
+                      &lt;View style={screenStyles.QRSflatlistContainer}&gt;
+                        &lt;View style={screenStyles.QRSflatlistSubView}&gt;
+                          &lt;View style={screenStyles.QRSflatListcontentView}&gt;
+                            &lt;Text style={screenStyles.QRSflatlistBoldText}&gt;{item.cardNumber}&lt;/Text&gt;
+                            &lt;Text style={screenStyles.QRSflatListNormalTextColor}&gt;{item.cardName}&lt;/Text&gt;
+                          &lt;/View&gt;
+                          &lt;View style={screenStyles.QRSflatlistContainerSubview}&gt;
+                            &lt;Image source={item.image} style={screenStyles.QRSpumpImage} /&gt;
+                          &lt;/View&gt;
+                        &lt;/View&gt;
+                      &lt;/View&gt;
+                    &lt;/TouchableOpacity&gt;
+                  }
+                /&gt;
+              &lt;/View&gt;
+            &lt;/ScrollView&gt;
+            {this.hideAndShowConfirmButton()}
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/SafeAreaView&gt;);
+    } else {
+      re<span class="cstat-no" title="statement not covered" >turn &lt;View /&gt;;</span>
+    }
+  }<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+}
+&nbsp;
+/**
+* Converting redux state to props for the qRCodeScanning component
+* @function mapStateToProps: It takes redux state as params and converts it as props for the above component.
+* @params {object} state: redux state fetched from store
+* @returns {object} props: converted props which can be used in the above component.
+*/
+const mapStateToProps <span class="cstat-no" title="statement not covered" >= state =<span class="fstat-no" title="function not covered" >&gt; ({<span class="cstat-no" title="statement not covered" ></span></span></span>
+  formValues: getFormValues("qRCodeScanning")(state),
+});
+&nbsp;
+/**
+* Converting functions to props for the qRCodeScanning component
+* @function mapDispatchToProps: It takes dispatch as params and further pass it to the methods
+* with given payloads.
+* The methods are converted into props and passed to the Login Component for use
+* @params {function} dispatch: It dispatches action to the reducer
+* @returns {object} props: Its converted props and have methods.
+*/
+const mapDispatchToProps <span class="cstat-no" title="statement not covered" >= dispatc<span class="fstat-no" title="function not covered" >h =&gt; ({});<span class="cstat-no" title="statement not covered" ></span></span></span>
+&nbsp;
+/**
+* @function compose: It takes higher order function as params in order and returns one HOC which again takes
+* component and as param and returns an updated component.
+* @params {function} connect, reduxForm
+* @function connect: It takes "mapStateToProps" and "mapDispatchToProps" which converts state and methods
+* as props for the component.
+* @function reduxForm: It takes an object as params which has the form name and "validate" function as
+* properties. It internally creates a reducer and validates the form.
+*/
+<span class="cstat-no" title="statement not covered" >export default compose(</span>
+  connect(mapStateToProps, mapDispatchToProps),
+  reduxForm({ form: "qRCodeScanning" })
+)(QRCodeScanning<span class="cstat-no" title="statement not covered" >);</span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 05 2018 19:09:36 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

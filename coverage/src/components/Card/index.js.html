@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/Card/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/Card</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/17</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span>
+ * @author Aman Shekhar &lt;aman.s@photoninfotech.net&gt;
+ * @version 1.0.2
+ * @summary Custom CardView component.
+ * @description A custom CardView component is being made. This component will be getting used wherever the CardView is required instead of creating a new one again and again.
+ */
+&nbsp;
+/**
+ * @import React compoment from "react" for creating custom react component and to use lifecycle
+ * hooks come along with react.
+ * @import View, Text, TouchableOpacity, StyleSheet, Image from react-native for creating our view.
+ * @import LinearGradient from "react-native-linear-gradient" to use gradient.
+ */
+&nbsp;
+import React,<span class="cstat-no" title="statement not covered" > { Component } from "react";</span>
+import { View, Text<span class="cstat-no" title="statement not covered" >, TouchableOpacity, Styl</span>eSheet, Image } from "react-native";
+import LinearGradient from "react<span class="cstat-no" title="statement not covered" >-native-linear-gradient";</span>
+&nbsp;
+/**
+ * @import componentstyles object. This object have all the styles written for the screens.
+ * the styles have been defined in a file named "componentStyles" which is again importing
+ * an object from theme file when our theme related styles have been defined.
+ */
+import componentstyles <span class="cstat-no" title="statement not covered" >from "../../styles/componentStyles";<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+/**
+ * It is initializing the state with default Props properties.
+ * title: Represents the title of the Button.
+ * onPress: Handles the onPress of the Button.
+ * color: Defines the color of the Card
+ */
+const defaultProps <span class="cstat-no" title="statement not covered" >= {</span>
+  title: "Card",
+  onPress: () =&gt; {},<span class="fstat-no" title="function not covered" ></span>
+  color: "#333333"
+};
+&nbsp;
+/**
+ * @class CardItem
+ * @extends Component
+ * @summary Represents Custom CardView.
+ * @description This is a Custom Component for CardView. It extends react Component class for using the functions comes along with it.
+ */
+class CardI<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >te</span>m extends Component {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span>
+  /**
+   * @function render: Its one of the main functions of react component. It renders the JSX on the screen
+   * In render() we are making a view for the custom CardView.
+   */
+&nbsp;
+  renderItemView = ()<span class="fstat-no" title="function not covered" > =</span>&gt; {
+    let {
+      image,
+      cashOff,
+      voucherCode,
+      voucherValidity,
+      store,
+      currencyIcon
+    } <span class="cstat-no" title="statement not covered" >= this.props</span>;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span>
+    re<span class="cstat-no" title="statement not covered" >turn (</span>
+      &lt;LinearGradient
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 0 }}
+        colors={["#339933", "#006666", "#003366"]}
+        style={[componentstyles.cardViewForRedeemed, this.props.styles]}
+      &gt;
+        &lt;View style={[componentstyles.cardCoupenView, this.props.styles]}&gt;
+          &lt;View style={componentstyles.imageView}&gt;
+            &lt;View style={componentstyles.imageborderView}&gt;
+              &lt;Image
+                // source={image ? { uri: image } : require("./../../assets/images/noimage.jpg")}
+                source={require("./../../assets/images/burgerQueen.jpg")}
+                style={componentstyles.image}
+                resizeMode="contain"
+              /&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+          &lt;View style={componentstyles.contentContainer}&gt;
+            &lt;View style={componentstyles.containtStore}&gt;
+              &lt;Text style={componentstyles.storeTextStyle}&gt;
+                {store ? store : "Undefined"}
+              &lt;/Text&gt;
+            &lt;/View&gt;
+            &lt;View style={componentstyles.containtText}&gt;
+              &lt;Text style={componentstyles.cashoffTextStyle}&gt;
+                {currencyIcon ? currencyIcon : ""}
+                {cashOff ? cashOff : "0"} OFF in your in your next purchase
+              &lt;/Text&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+          &lt;View style={componentstyles.dottedView} /&gt;
+          &lt;View style={componentstyles.coupenCodeView}&gt;
+            &lt;View style={componentstyles.CoupenCodeTextView}&gt;
+              &lt;Text style={componentstyles.coupenCodeTextStyle}&gt;
+                Coupon Code
+              &lt;/Text&gt;
+            &lt;/View&gt;
+            &lt;View style={componentstyles.CoupenCodeText}&gt;
+              &lt;Text style={componentstyles.codeTextStyle}&gt;
+                {voucherCode ? voucherCode : "Code Not Found"}
+              &lt;/Text&gt;
+            &lt;/View&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+        &lt;View style={[componentstyles.cardValidityView]}&gt;
+          &lt;View style={componentstyles.validityContentView}&gt;
+            &lt;Text style={componentstyles.validityText}&gt;
+              Valid till {voucherValidity ? voucherValidity : "DD MMM YYYY"}
+            &lt;/Text&gt;
+          &lt;/View&gt;
+        &lt;/View&gt;
+      &lt;/LinearGradient&gt;
+    );
+  };<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+&nbsp;
+  render() {
+    let { voucherUse<span class="cstat-no" title="statement not covered" >d } = this.props;</span>
+    if<span class="cstat-no" title="statement not covered" > (voucherUsed == "yes") {</span>
+      re<span class="cstat-no" title="statement not covered" >turn (</span>
+        &lt;View style={[componentstyles.cardcontainerForRedeemed]}&gt;
+          {this.renderItemView()}
+        &lt;/View&gt;
+      );
+    } else {
+      re<span class="cstat-no" title="statement not covered" >turn (</span>
+        &lt;TouchableOpacity activeOpacity={0.5} onPress={this.props.onPress}&gt;
+          &lt;View style={[componentstyles.cardcontainer]}&gt;
+            {this.renderItemView()}
+          &lt;/View&gt;
+        &lt;/TouchableOpacity&gt;
+      );
+    }
+  }<span class="cstat-no" title="statement not covered" ></span>
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >CardItem.defaultProps = defaultProps;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >export de<span class="cstat-no" title="statement not covered" ></span>fault CardItem;</span>
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 05 2018 19:09:36 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

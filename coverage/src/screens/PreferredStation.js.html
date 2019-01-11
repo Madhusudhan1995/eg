@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/screens/PreferredStation.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/screens</a> PreferredStation.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/48</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/30</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span></span></span></span></span>
+* @author Megha&lt;megha.h@photoninfotech.net&gt;
+* @version 1.0.3
+* @summary PreferredStation screen for the application.
+* @description The screen shows the PreferredStation
+* first login to application. using credentials email and password,
+* this screen will be in UserSetting screen when you tap on PreferredStation this screen opens
+* The screen uses react npm modules and also few custom components.
+*/
+&nbsp;
+/**
+* @import React compoment from "react" for creating custom react component and to use lifecycle
+* hooks come along with react.
+* @import Text, View, TouchableOpacity, FlatList, Image, Dimensions from "react-native" for creating our view.
+* @import connect from "react-redux" for connecting react compoenent with redux which will convert
+* our component as container component.
+*/
+import React,<span class="cstat-no" title="statement not covered" > { Component } from "react";</span>
+import { View, Text<span class="cstat-no" title="statement not covered" >, TouchableOpacity, Flat</span>List, Image, Alert } from "react-native";
+import { connect }<span class="cstat-no" title="statement not covered" > from "react-redux";</span>
+&nbsp;
+/**
+*  @import Swipeout from react native Swipeout and it is used for swipe left to view remove option and swipe right to hide remove option in preferred station
+*  @import Swiper from react native Swiper and it is used for swipe the amenities in the carousel
+* */
+import Swipeout from "react<span class="cstat-no" title="statement not covered" >-native-swipeout";</span>
+import Swiper from "react<span class="cstat-no" title="statement not covered" >-native-swiper";</span>
+/**
+* @import Toolbar for building our screen.
+* @description  Toolbar is to Display on top screen and shows Title
+* @import {navigateTo, navigateBack} from "helpers" file. "helpers" file has
+* reusable functions written in it.
+* @description navigateTo(scene): It takes screen name as a parameter and navigates to the respective screen.
+* navigateBack(): It simply naviagates the user to the back screen.
+*/
+import { Toolbar }<span class="cstat-no" title="statement not covered" > from "../components";</span>
+import { naviga<span class="cstat-no" title="statement not covered" >teBack, navigateTo } f</span>rom "../helpers";
+&nbsp;
+/**
+* @import ConstantList object. This object have all the constant texts written for the screens.
+* the constants have been defined in a file named "language_Constants" which is again importing
+*/
+import Constantlist from <span class="cstat-no" title="statement not covered" >"../constants/lagunage_constant";</span>
+/**
+* @import preferredStation object. This object have all the styles written for the preferred station screens.
+* the styles have been defined in a file named "screenStyles" which is again importing
+* an object from theme file when our theme related styles have been defined.
+*/
+import preferredStation <span class="cstat-no" title="statement not covered" >from "../styles/preferredStation";</span>
+import screenstyles <span class="cstat-no" title="statement not covered" >from "../styles/screenStyles";<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+/**
+* @class PreferredStation
+* @extends Component
+* @summary Represents PreferredStation class.
+* @description This is a PreferredStation class. It extands react Component class for using the functions comes along with it.
+*/
+class PreferredStat<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >io</span>n extends Component {<span class="cstat-no" title="statement not covered" ></span></span>
+    /**
+    * @constructor It is initializing the state with default properties.
+    * distanceType: this is using for km as default value.
+    * data object for passing the data to Flatlist to display the Preferred Stations on the screen
+    */
+    constru<span class="fstat-no" title="function not covered" >ctor(props) {<span class="cstat-no" title="statement not covered" ></span></span>
+<span class="cstat-no" title="statement not covered" >        super(props);<span class="cstat-no" title="statement not covered" ></span></span>
+        this.state = {
+            preferredStationData: Constantlist.preferredStation11.preferredStationFlatlist
+        };
+    }
+&nbsp;
+    onSubmit = <span class="fstat-no" title="function not covered" >(v</span>alues) =&gt; {
+<span class="cstat-no" title="statement not covered" >        Alert.alert(</span>
+            "",
+            "Are you sure?",
+            [
+                { text: "Yes", onPress:<span class="fstat-no" title="function not covered" > () =&gt; n</span>avi<span class="cstat-no" title="statement not covered" >gateTo("login") },</span>
+                { text: "No" }
+            ],
+            {cancelable: false}
+        );
+    }<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span>
+&nbsp;
+    /**
+    * @function render: Its one of the main functions of react component. It renders the JSX on the screen
+    */
+    render() {
+        const swipeoutBtn<span class="cstat-no" title="statement not covered" >s = [</span>
+            {
+                component: (
+                    &lt;View
+                        style={preferredStation.swipeoutButton}&gt;
+                    &lt;TouchableOpacity onPress={this.onSubmit}&gt;
+                        &lt;Image source={require("../assets/images/settings/Trash.png")} /&gt;
+                        &lt;Text style={preferredStation.removeText}&gt;Remove&lt;/Text&gt;
+                    &lt;/TouchableOpacity&gt;
+                    &lt;/View&gt;
+                ),
+                backgroundColor: "#fafafa ",
+                underlayColor: "#fafafa ",
+                onPress: (<span class="fstat-no" title="function not covered" >) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    console.log("Delet</span>e Item");
+                }
+            }
+        ];
+<span class="cstat-no" title="statement not covered" >        return (</span>
+            &lt;View style={preferredStation.mainView}&gt;
+                &lt;Toolbar
+                    style={[preferredStation.noBorderToolbar]}
+                    onClickLeftIcon={navigateBack}
+                    iconName="loginpage"
+                    title="Preferred Stations" /&gt;
+                    
+                &lt;View style={preferredStation.subView}&gt;
+                    &lt;View style={preferredStation.headerTextView}&gt;
+                        &lt;Text style={preferredStation.mainHeaderText}&gt; Stay up-to-date &amp; sign up to our &lt;/Text&gt;
+                        &lt;Text style={preferredStation.subHeaderText}&gt;newsletter.&lt;/Text&gt;
+                    &lt;/View&gt;
+                    &lt;Swipeout right={swipeoutBtns} autoClose="true" backgroundColor="transparent"&gt;
+                        &lt;View&gt;
+                            &lt;FlatList
+                                vertical
+                                showsVerticalScrollIndicator={false}
+                                data={this.state.preferredStationData}
+                                ItemSeparat<span class="fstat-no" title="function not covered" >orComponent={() =&gt; &lt;Vie</span>w s<span class="cstat-no" title="statement not covered" >tyle={preferredStation.flatlistSeperator} /&gt;}</span>
+<span class="fstat-no" title="function not covered" >                                renderItem</span>={({ item }) =&gt; (<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+                                    &lt;TouchableOpacity onPress={() =&gt; navigateTo("storeDetails"<span class="fstat-no" title="function not covered" >, item)}</span>&gt;<span class="cstat-no" title="statement not covered" ></span>
+                                        &lt;View style={preferredStation.mainFlatlistView}&gt;
+                                            &lt;View style={preferredStation.shellView}&gt;
+                                                &lt;View style={preferredStation.shellSubView}&gt;
+                                                    &lt;View style={preferredStation.shellTextView}&gt;
+                                                        &lt;Text style={preferredStation.shellItem}&gt;{item.name}&lt;/Text&gt;
+                                                    &lt;/View&gt;
+                                                    &lt;View style={preferredStation.directionsMainView}&gt;
+                                                        &lt;View style={preferredStation.directionsSubView}&gt;
+                                                            &lt;Text style={preferredStation.directionsText}&gt;Directions&lt;/Text&gt;
+                                                        &lt;/View&gt;
+                                                        &lt;View&gt;
+                                                            &lt;Text style={preferredStation.directionsDistance}&gt;0.16 KM&lt;/Text&gt;
+                                                        &lt;/View&gt;
+                                                    &lt;/View&gt;
+                                                &lt;/View&gt;
+                                                &lt;View style={preferredStation.itemFlatlistView}&gt;
+                                                    &lt;Text style={preferredStation.itemAddressView}&gt;{item.address}&lt;/Text&gt;
+                                                    &lt;View style={preferredStation.itemOpenMainView}&gt;
+                                                        &lt;Text style={preferredStation.itemOpen}&gt;{item.open}&lt;/Text&gt;
+                                                        &lt;Text style={preferredStation.itemTime}&gt;{item.Time}&lt;/Text&gt;
+                                                    &lt;/View&gt;
+                                                    &lt;View style={preferredStation.itemMainFuelView}&gt;
+                                                        &lt;Text style={preferredStation.itemFuel}&gt;{item.fuel}&lt;/Text&gt;
+                                                        &lt;Text style={preferredStation.itemType}&gt;{item.Type}&lt;/Text&gt;
+                                                    &lt;/View&gt;
+                                                &lt;/View&gt;
+                                            &lt;/View&gt;
+                                            &lt;View style={preferredStation.amentiesView}&gt;
+                                                &lt;View style={preferredStation.dotsMainView}&gt;
+                                                    &lt;View style={preferredStation.dotView}&gt;
+                                                    &lt;/View&gt;
+                                                    &lt;View style={preferredStation.dotsView}&gt;
+                                                    &lt;/View&gt;
+                                                &lt;/View&gt;
+                                                &lt;View style={preferredStation.amentiesMainView}&gt;
+                                                    &lt;View style={preferredStation.amentiesSwiperSubView}&gt;
+                                                        &lt;View style={preferredStation.amentiesFirstSwiperMainView} /&gt;
+                                                        &lt;View style={preferredStation.amentiesFirstSwiperSubView}&gt;
+                                                            &lt;View&gt;
+                                                                &lt;Image style={preferredStation.amentiesImage} source={require("../assets/images/home-Restroom-android.png")} /&gt;
+                                                                &lt;Text style={preferredStation.amentiesText}&gt;{Constantlist.storeDetails.restRoom}&lt;/Text&gt;
+                                                            &lt;/View&gt;
+                                                            &lt;View&gt;
+                                                                &lt;Image style={preferredStation.amentiesImage} source={require("../assets/images/home-restaurant-android.png")} /&gt;
+                                                                &lt;Text style={preferredStation.amentiesText}&gt;{Constantlist.storeDetails.restaurant}&lt;/Text&gt;
+                                                            &lt;/View&gt;
+                                                            &lt;View&gt;
+                                                                &lt;Image style={preferredStation.amentiesImage} source={require("../assets/images/home-carwash-android.png")} /&gt;
+                                                                &lt;Text style={preferredStation.amentiesText}&gt;{Constantlist.storeDetails.carWash}&lt;/Text&gt;
+                                                            &lt;/View&gt;
+                                                            &lt;View&gt;
+                                                                &lt;Image style={preferredStation.amentiesImageView} source={require("../assets/images/home-24-7-android.png")} /&gt;
+                                                                &lt;Text style={preferredStation.amentiesTextView}&gt;{Constantlist.storeDetails.storeOpens}&lt;/Text&gt;
+                                                            &lt;/View&gt;
+                                                        &lt;/View&gt;
+                                                    &lt;/View&gt;
+                                                &lt;/View&gt;
+                                            &lt;/View&gt;
+                                        &lt;/View&gt;
+                                    &lt;/TouchableOpacity&gt;
+                                )}
+                            /&gt;
+                        &lt;/View&gt;
+                    &lt;/Swipeout&gt;
+                    &lt;Swipeout right={swipeoutBtns} autoClose="true" backgroundColor="transparent"&gt;
+                        &lt;View&gt;
+                            &lt;FlatList
+                                vertical
+                                showsVerticalScrollIndicator={false}
+                                data={this.state.preferredStationData}
+                                ItemSeparat<span class="fstat-no" title="function not covered" >orComponent={() =&gt; &lt;Vie</span>w s<span class="cstat-no" title="statement not covered" >tyle={preferredStation.flatlistSeperator} /&gt;}</span>
+<span class="fstat-no" title="function not covered" >                                renderItem</span>={({ item }) =&gt; (<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span>
+                                    &lt;TouchableOpacity onPress={() =&gt; navigateTo("storeDetails"<span class="fstat-no" title="function not covered" >, item)}</span>&gt;<span class="cstat-no" title="statement not covered" ></span>
+                                        &lt;View  style={preferredStation.mainFlatlistSubView}&gt;
+                                            &lt;View style={preferredStation.shellView}&gt;
+                                                &lt;View style={preferredStation.shellSubView}&gt;
+                                                    &lt;View style={preferredStation.shellTextView}&gt;
+                                                        &lt;Text style={preferredStation.shellItem}&gt;{item.name}&lt;/Text&gt;
+                                                    &lt;/View&gt;
+                                                    &lt;View style={preferredStation.directionsMainView}&gt;
+                                                        &lt;View style={preferredStation.directionsSubView}&gt;
+                                                            &lt;Text style={preferredStation.directionsText}&gt;Directions&lt;/Text&gt;
+                                                        &lt;/View&gt;
+                                                        &lt;View&gt;
+                                                            &lt;Text style={preferredStation.directionsDistance}&gt;0.16 KM&lt;/Text&gt;
+                                                        &lt;/View&gt;
+                                                    &lt;/View&gt;
+                                                &lt;/View&gt;
+                                                &lt;View style={preferredStation.itemFlatlistView}&gt;
+                                                    &lt;Text style={preferredStation.itemAddressView}&gt;{item.address}&lt;/Text&gt;
+                                                    &lt;View style={preferredStation.itemOpenMainView}&gt;
+                                                        &lt;Text style={preferredStation.itemOpen}&gt;{item.open}&lt;/Text&gt;
+                                                        &lt;Text style={preferredStation.itemTime}&gt;{item.Time}&lt;/Text&gt;
+                                                    &lt;/View&gt;
+                                                    &lt;View style={preferredStation.itemMainFuelView}&gt;
+                                                        &lt;Text style={preferredStation.itemFuel}&gt;{item.fuel}&lt;/Text&gt;
+                                                        &lt;Text style={preferredStation.itemType}&gt;{item.Type}&lt;/Text&gt;
+                                                    &lt;/View&gt;
+                                                &lt;/View&gt;
+                                            &lt;/View&gt;
+                                            &lt;View style={preferredStation.amentiesView}&gt;
+                                                &lt;View style={preferredStation.dotsMainView}&gt;
+                                                    &lt;View style={preferredStation.dotView}&gt;
+                                                    &lt;/View&gt;
+                                                    &lt;View style={preferredStation.dotsView}&gt;
+                                                    &lt;/View&gt;
+                                                &lt;/View&gt;
+                                                &lt;View style={preferredStation.amentiesMainView}&gt;
+                                                    &lt;View style={preferredStation.amentiesSwiperSubView}&gt;
+                                                        &lt;View style={preferredStation.amentiesFirstSwiperMainView} /&gt;
+                                                        &lt;View style={preferredStation.amentiesFirstSwiperSubView}&gt;
+                                                            &lt;View&gt;
+                                                                &lt;Image style={preferredStation.amentiesImage} source={require("../assets/images/home-Restroom-android.png")} /&gt;
+                                                                &lt;Text style={preferredStation.amentiesText}&gt;{Constantlist.storeDetails.restRoom}&lt;/Text&gt;
+                                                            &lt;/View&gt;
+                                                            &lt;View&gt;
+                                                                &lt;Image style={preferredStation.amentiesImage} source={require("../assets/images/home-restaurant-android.png")} /&gt;
+                                                                &lt;Text style={preferredStation.amentiesText}&gt;{Constantlist.storeDetails.restaurant}&lt;/Text&gt;
+                                                            &lt;/View&gt;
+                                                            &lt;View&gt;
+                                                                &lt;Image style={preferredStation.amentiesImage} source={require("../assets/images/home-carwash-android.png")} /&gt;
+                                                                &lt;Text style={preferredStation.amentiesText}&gt;{Constantlist.storeDetails.carWash}&lt;/Text&gt;
+                                                            &lt;/View&gt;
+                                                            &lt;View&gt;
+                                                                &lt;Image style={preferredStation.amentiesImageView} source={require("../assets/images/home-24-7-android.png")} /&gt;
+                                                                &lt;Text style={preferredStation.amentiesTextView}&gt;{Constantlist.storeDetails.storeOpens}&lt;/Text&gt;
+                                                            &lt;/View&gt;
+                                                        &lt;/View&gt;
+                                                    &lt;/View&gt;
+                                                &lt;/View&gt;
+                                            &lt;/View&gt;
+                                        &lt;/View&gt;
+                                    &lt;/TouchableOpacity&gt;
+                                )}
+                            /&gt;
+                        &lt;/View&gt;
+                    &lt;/Swipeout&gt;
+                &lt;/View&gt;
+            &lt;/View&gt;
+        );
+    }<span class="cstat-no" title="statement not covered" ></span>
+}
+&nbsp;
+/**
+* Converting redux state to props for the Preferred Station component
+* @function mapStateToProps: It takes redux state as params and converts it as props for the above component.
+* @params {object} state: redux state fetched from store
+* @returns {object} props: converted props which can be used in the above component.
+*/
+const mapStateToProps <span class="cstat-no" title="statement not covered" >= state =<span class="fstat-no" title="function not covered" >&gt; ({});<span class="cstat-no" title="statement not covered" ></span></span></span>
+&nbsp;
+/**
+* Converting functions to props for the Preferred Station component
+* @function mapDispatchToProps: It takes dispatch as params and further pass it to the methods
+* with given payloads.
+* The methods are converted into props and passed to the Login Component for use
+* @params {function} dispatch: It dispatches action to the reducer
+* @returns {object} props: Its converted props and have methods.
+*/
+const mapDispatchToProps <span class="cstat-no" title="statement not covered" >= dispatc<span class="fstat-no" title="function not covered" >h =&gt; ({});<span class="cstat-no" title="statement not covered" ></span></span></span>
+&nbsp;
+/**
+* @function connect: It takes "mapStateToProps" and "mapDispatchToProps" which converts state and methods
+* as props for the component.
+*/
+<span class="cstat-no" title="statement not covered" >export default connect(mapStateToProps, mapDispatchToProps)(PreferredStation);<span class="cstat-no" title="statement not covered" ></span></span></pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Dec 05 2018 19:09:36 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

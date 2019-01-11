@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="C:\Users\nakkamadhusudhan\Desktop\eg\__tests__\src\components\Card.test.js">
+    </file>
+    <file path="C:\Users\nakkamadhusudhan\Desktop\eg\__tests__\src\screens\GoFuelCard.test.js">
+    </file>
+    <file path="C:\Users\nakkamadhusudhan\Desktop\eg\__tests__\src\screens\AddLoyaltyCard.test.js">
+    </file>
+    <file path="C:\Users\nakkamadhusudhan\Desktop\eg\__tests__\src\screens\ScanLoyaltyCard.test.js">
+    </file>
+</testExecutions>

@@ -1,0 +1,34 @@
+# OSX
+#
+.DS_Store
+.jest
+
+# Xcode
+#
+build/
+
+# Android
+build/
+.idea
+.gradle
+*.properties
+*.iml
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# BUCK
+buck-out/
+\.buckd/
+
+
+
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+
+# Bundle artifact
+*.jsbundle

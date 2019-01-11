@@ -1,0 +1,16 @@
+export const AUTHENTICATE = "AUTHENTICATE";
+export const LOGOUT = "LOGOUT";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const INIT = "INIT";
+export const LOADER = "LOADER";
+export const APP_INSTALLED = "APP_INSTALLED";
+export const SET_SCREEN_NAME = "SET_SCREEN_NAME";
+export const STORE_USER_DETAILS = "STORE_USER_DETAILS";
+export const FAQ_DATA = "FAQ_DATA";
+export const VOUCHER_LIST_DATA = "VOUCHER_LIST_DATA";
+export const WEATHER_DATA = "WEATHER_DATA";
+export const WALLET_ADDCARD_DATA = "WALLET_ADDCARD_DATA";
+export const CONTACTUS_DATA = "CONTACTUS_DATA";
+export const WALLET_CARDS = "WALLET_CARDS";
+export const EDITPROFILE_DATA = "EDITPROFILE_DATA";
+export const GET_STATIONS ="GET_STATIONS";

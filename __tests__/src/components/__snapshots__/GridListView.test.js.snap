@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridListView Component ListPicker should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderBottomColor": "#dddddd",
+        "borderBottomWidth": 1,
+        "borderTopColor": "#dddddd",
+        "borderTopWidth": 1,
+        "flexDirection": "row",
+        "paddingVertical": 8,
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderRightColor": "#dddddd",
+          "borderRightWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": "50%",
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../src/assets/images/listViewIcon.png",
+          }
+        }
+        style={
+          Object {
+            "height": "auto",
+            "marginRight": 8,
+            "width": 14,
+          }
+        }
+      />
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#ffffff",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "#000000",
+            },
+            Object {},
+          ]
+        }
+      >
+        List View
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": "50%",
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../src/assets/images/gridViewIcon.png",
+          }
+        }
+        style={
+          Object {
+            "height": "auto",
+            "marginRight": 8,
+            "width": 14,
+          }
+        }
+      />
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#ffffff",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "#999999",
+            },
+            Object {},
+          ]
+        }
+      >
+        Grid View
+      </Text>
+    </View>
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        style={
+          Object {
+            "paddingTop": 12,
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;
